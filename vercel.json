@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "devCommand": "npx serve",
+  "installCommand": "npm install --save-dev serve",
+  "framework": null,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/data/(.*)", "headers": { "cache-control": "no-cache, no-store, must-revalidate" } },
+    { "src": "/admin", "dest": "/admin.html" }
+  ]
+}
