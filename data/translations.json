@@ -15,8 +15,25 @@
   "hero.location": { "es": "Tías, Lanzarote", "en": "Tías, Lanzarote", "de": "Tías, Lanzarote" },
   "about.label": { "es": "Sobre Nosotros", "en": "About Us", "de": "Über uns" },
   "about.title": { "es": "Belleza que Transforma", "en": "Beauty that Transforms", "de": "Schönheit, die transformiert" },
-  "about.text": { "es": "Genoveva Ganeva lidera un equipo de profesionales con amplia formación y experiencia. Nos especializamos en encontrar el tratamiento exacto que cada cliente necesita, utilizando productos premium como OPI y Casmara para garantizar resultados excepcionales.", "en": "Genoveva Ganeva leads a team of highly trained and experienced professionals. We specialize in finding the exact treatment each client needs, using premium products like OPI and Casmara to guarantee exceptional results.", "de": "Genoveva Ganeva leitet ein Team aus hochqualifizierten und erfahrenen Fachleuten. Wir sind darauf spezialisiert, die exakte Behandlung zu finden, die jeder Kunde benötigt, und verwenden Premium-Produkte wie OPI und Casmara, um außergewöhnliche Ergebnisse zu garantieren." },
-  "about.feat1": { "es": "Productos Premium OPI & Casmara", "en": "Premium OPI & Casmara Products", "de": "Premium OPI & Casmara Produkte" },
+"about.text": {
+  "es": "Genoveva Ganeva lidera un equipo de profesionales con amplia formación y experiencia. Nos especializamos en encontrar el tratamiento exacto que cada cliente necesita, utilizando productos premium nacionales e internacionales para garantizar resultados excepcionales.",
+  "en": "Genoveva Ganeva leads a team of highly trained and experienced professionals. We specialize in finding the exact treatment each client needs, using premium national and international products to guarantee exceptional results.",
+  "de": "Genoveva Ganeva leitet ein Team aus hochqualifizierten und erfahrenen Fachleuten. Wir sind darauf spezialisiert, die exakte Behandlung zu finden, die jeder Kunde benötigt, und verwenden Premium-Produkte aus In- und Ausland, um außergewöhnliche Ergebnisse zu garantieren."
+},
+"about.feat1": {
+  "es": "Productos Premium Nacionales e Internacionales",
+  "en": "Premium National & International Products",
+  "de": "Premium Nationale & Internationale Produkte"
+}"about.text": {
+  "es": "Genoveva Ganeva lidera un equipo de profesionales con amplia formación y experiencia. Nos especializamos en encontrar el tratamiento exacto que cada cliente necesita, utilizando productos premium nacionales e internacionales para garantizar resultados excepcionales.",
+  "en": "Genoveva Ganeva leads a team of highly trained and experienced professionals. We specialize in finding the exact treatment each client needs, using premium national and international products to guarantee exceptional results.",
+  "de": "Genoveva Ganeva leitet ein Team aus hochqualifizierten und erfahrenen Fachleuten. Wir sind darauf spezialisiert, die exakte Behandlung zu finden, die jeder Kunde benötigt, und verwenden Premium-Produkte aus In- und Ausland, um außergewöhnliche Ergebnisse zu garantieren."
+},
+"about.feat1": {
+  "es": "Productos Premium Nacionales e Internacionales",
+  "en": "Premium National & International Products",
+  "de": "Premium Nationale & Internationale Produkte"
+}
   "about.feat2": { "es": "Tecnología Láser Diodo", "en": "Diode Laser Technology", "de": "Diodenlaser-Technologie" },
   "about.feat3": { "es": "Tratamientos Personalizados", "en": "Personalized Treatments", "de": "Personalisierte Behandlungen" },
   "about.feat4": { "es": "Ambiente Acogedor", "en": "Welcoming Environment", "de": "Einladende Atmosphäre" },
