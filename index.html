@@ -26,12 +26,12 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <button class="mobile-close" id="mobileClose">✕</button>
-        <a href="#inicio" onclick="closeMobile()">Inicio</a>
-        <a href="#nosotros" onclick="closeMobile()">Nosotros</a>
-        <a href="#servicios" onclick="closeMobile()">Tratamientos</a>
-        <a href="#galeria" onclick="closeMobile()">Galería</a>
-        <a href="#equipo" onclick="closeMobile()">Equipo</a>
-        <a href="#contacto" onclick="closeMobile()">Reservar</a>
+        <a href="#inicio" onclick="closeMobile()" data-i18n="nav.home">Inicio</a>
+        <a href="#nosotros" onclick="closeMobile()" data-i18n="nav.about">Nosotros</a>
+        <a href="#servicios" onclick="closeMobile()" data-i18n="nav.services">Tratamientos</a>
+        <a href="#galeria" onclick="closeMobile()" data-i18n="nav.gallery">Galería</a>
+        <a href="#equipo" onclick="closeMobile()" data-i18n="nav.team">Equipo</a>
+        <a href="#contacto" onclick="closeMobile()" data-i18n="nav.reserve">Reservar</a>
     </div>
 
     <!-- Navbar -->
@@ -44,17 +44,17 @@
         <div class="language-selector">
             <select id="languageSelect" onchange="changeLanguage(this.value)">
                 <option value="es">🇪🇸 ES</option>
-                <option value="en">🇬 EN</option>
+                <option value="en">🇬🇧 EN</option>
                 <option value="de">🇩🇪 DE</option>
             </select>
         </div>
 
         <ul class="nav-links">
-            <li><a href="#nosotros" class="magnetic">Nosotros</a></li>
-            <li><a href="#servicios" class="magnetic">Tratamientos</a></li>
-            <li><a href="#galeria" class="magnetic">Galería</a></li>
-            <li><a href="#equipo" class="magnetic">Equipo</a></li>
-            <li><a href="#contacto" class="nav-cta magnetic">Reservar</a></li>
+            <li><a href="#nosotros" class="magnetic" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="#servicios" class="magnetic" data-i18n="nav.services">Tratamientos</a></li>
+            <li><a href="#galeria" class="magnetic" data-i18n="nav.gallery">Galería</a></li>
+            <li><a href="#equipo" class="magnetic" data-i18n="nav.team">Equipo</a></li>
+            <li><a href="#contacto" class="nav-cta magnetic" data-i18n="nav.reserve">Reservar</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
             <span></span><span></span><span></span>
@@ -79,47 +79,48 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="dot"></span>
-                Belleza & Estética Avanzada
+                <span data-i18n="hero.badge">Belleza & Estética Avanzada</span>
             </div>
             <h1 class="hero-title">
-                <span class="line"><span>Tu belleza,</span></span>
-                <span class="line"><span><em>nuestra</em></span></span>
-                <span class="line"><span class="outline-text">pasión</span></span>
+                <span class="line"><span data-i18n="hero.title.line1">Tu belleza,</span></span>
+                <span class="line"><span><em data-i18n="hero.title.line2">nuestra</em></span></span>
+                <span class="line"><span class="outline-text" data-i18n="hero.title.line3">pasión</span></span>
             </h1>
-            <p class="hero-description">
+            <p class="hero-description" data-i18n="hero.description">
                 En GG Beauty Aesthetics, Genoveva Ganeva y su equipo te ofrecen tratamientos personalizados con tecnología de vanguardia y productos premium para realzar tu belleza natural.
             </p>
             <div class="hero-buttons">
-                <a href="#servicios" class="btn-primary magnetic"><span>Ver Tratamientos</span></a>
-                <a href="#contacto" class="btn-secondary magnetic">Reservar Cita</a>
+                <a href="#servicios" class="btn-primary magnetic"><span data-i18n="hero.btn1">Ver Tratamientos</span></a>
+                <a href="#contacto" class="btn-secondary magnetic" data-i18n="hero.btn2">Reservar Cita</a>
             </div>
         </div>
         <div class="hero-scroll">
-            <span>Explorar</span>
+            <span data-i18n="hero.scroll">Explorar</span>
             <div class="scroll-line"></div>
         </div>
-        <div class="hero-location">Tías, Lanzarote</div>
+        <div class="hero-location" data-i18n="hero.location">Tías, Lanzarote</div>
     </section>
 
     <!-- Marquee -->
     <div class="marquee-section">
         <div class="marquee">
-            <div class="marquee-item"><span>Radiofrecuencia Facial</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Depilación Láser Diodo</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Microblading</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Extensiones de Pestañas</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Masaje Relajante</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Manicura OPI</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Tratamientos Faciales</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Presoterapia</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Radiofrecuencia Facial</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Depilación Láser Diodo</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Microblading</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Extensiones de Pestañas</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Masaje Relajante</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Manicura OPI</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Tratamientos Faciales</span><div class="separator"></div></div>
-            <div class="marquee-item"><span>Presoterapia</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.1">Radiofrecuencia Facial</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.2">Depilación Láser Diodo</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.3">Microblading</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.4">Extensiones de Pestañas</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.5">Masaje Relajante</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.6">Manicura OPI</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.7">Tratamientos Faciales</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.8">Presoterapia</span><div class="separator"></div></div>
+            <!-- Repeat -->
+            <div class="marquee-item"><span data-i18n="marquee.1">Radiofrecuencia Facial</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.2">Depilación Láser Diodo</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.3">Microblading</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.4">Extensiones de Pestañas</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.5">Masaje Relajante</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.6">Manicura OPI</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.7">Tratamientos Faciales</span><div class="separator"></div></div>
+            <div class="marquee-item"><span data-i18n="marquee.8">Presoterapia</span><div class="separator"></div></div>
         </div>
     </div>
 
@@ -131,40 +132,28 @@
                 <div class="about-image-frame"></div>
                 <div class="about-floating-card">
                     <div class="number" data-count="5">0</div>
-                    <div class="label">★ Valoración Media</div>
+                    <div class="label" data-i18n="about.rating">★ Valoración Media</div>
                 </div>
             </div>
             <div class="about-content reveal-right">
                 <div class="section-label">
-                    <span>Sobre Nosotros</span>
+                    <span data-i18n="about.label">Sobre Nosotros</span>
                     <span style="width:38px;height:1px;background:var(--kaizen-gold);opacity:0.35;display:inline-block;"></span>
                 </div>
                 <h2 class="section-title">
-                    Belleza que <em>Transforma</em>
+                    <span data-i18n="about.title">Belleza que Transforma</span>
                 </h2>
-                <p class="about-text">
+                <p class="about-text" data-i18n="about.text">
                     Genoveva Ganeva lidera un equipo de profesionales con amplia formación y experiencia. Nos especializamos en encontrar el tratamiento exacto que cada cliente necesita, utilizando productos premium como OPI y Casmara para garantizar resultados excepcionales.
                 </p>
                 <div class="about-features">
-                    <div class="about-feature">
-                        <div class="icon">✦</div>
-                        <div class="text">Productos Premium OPI & Casmara</div>
-                    </div>
-                    <div class="about-feature">
-                        <div class="icon">◆</div>
-                        <div class="text">Tecnología Láser Diodo</div>
-                    </div>
-                    <div class="about-feature">
-                        <div class="icon">★</div>
-                        <div class="text">Tratamientos Personalizados</div>
-                    </div>
-                    <div class="about-feature">
-                        <div class="icon">✧</div>
-                        <div class="text">Ambiente Acogedor</div>
-                    </div>
+                    <div class="about-feature"><div class="icon">✦</div><div class="text" data-i18n="about.feat1">Productos Premium OPI & Casmara</div></div>
+                    <div class="about-feature"><div class="icon">◆</div><div class="text" data-i18n="about.feat2">Tecnología Láser Diodo</div></div>
+                    <div class="about-feature"><div class="icon">★</div><div class="text" data-i18n="about.feat3">Tratamientos Personalizados</div></div>
+                    <div class="about-feature"><div class="icon">✧</div><div class="text" data-i18n="about.feat4">Ambiente Acogedor</div></div>
                 </div>
                 <div class="about-btn-wrapper">
-                    <a href="#contacto" class="btn-primary magnetic"><span>Reservar Cita</span></a>
+                    <a href="#contacto" class="btn-primary magnetic" data-i18n="about.cta">Reservar Cita</a>
                 </div>
             </div>
         </div>
@@ -175,91 +164,34 @@
     <!-- Stats Section -->
     <section class="stats">
         <div class="stats-grid">
-            <div class="stat-item reveal stagger-1">
-                <div class="stat-number" data-count="500">0</div>
-                <div class="stat-divider"></div>
-                <div class="stat-label">Opiniones</div>
-            </div>
-            <div class="stat-item reveal stagger-2">
-                <div class="stat-number" data-count="28">0</div>
-                <div class="stat-divider"></div>
-                <div class="stat-label">Tratamientos</div>
-            </div>
-            <div class="stat-item reveal stagger-3">
-                <div class="stat-number" data-count="100">0</div>
-                <div class="stat-divider"></div>
-                <div class="stat-label">% Satisfacción</div>
-            </div>
-            <div class="stat-item reveal stagger-4">
-                <div class="stat-number" data-count="5">0</div>
-                <div class="stat-divider"></div>
-                <div class="stat-label">Años Experiencia</div>
-            </div>
+            <div class="stat-item reveal stagger-1"><div class="stat-number" data-count="500">0</div><div class="stat-divider"></div><div class="stat-label" data-i18n="stats.opinions">Opiniones</div></div>
+            <div class="stat-item reveal stagger-2"><div class="stat-number" data-count="28">0</div><div class="stat-divider"></div><div class="stat-label" data-i18n="stats.treatments">Tratamientos</div></div>
+            <div class="stat-item reveal stagger-3"><div class="stat-number" data-count="100">0</div><div class="stat-divider"></div><div class="stat-label" data-i18n="stats.satisfaction">% Satisfacción</div></div>
+            <div class="stat-item reveal stagger-4"><div class="stat-number" data-count="5">0</div><div class="stat-divider"></div><div class="stat-label" data-i18n="stats.experience">Años Experiencia</div></div>
         </div>
     </section>
 
-    <!-- Services Section (DYNAMIC - loads from JSON) -->
+    <!-- Services Section (DYNAMIC) -->
     <section class="services" id="servicios">
         <div class="section-header reveal">
-            <div class="section-label"><span>Nuestros Servicios</span></div>
-            <h2 class="section-title">Tratamientos de <em>Excelencia</em></h2>
+            <div class="section-label"><span data-i18n="services.label">Nuestros Servicios</span></div>
+            <h2 class="section-title"><span data-i18n="services.title">Tratamientos de Excelencia</span></h2>
         </div>
-        <!-- Dynamic container - services load from data/servicios.json -->
         <div id="services-container"></div>
     </section>
 
     <!-- Gallery Section -->
     <section class="gallery" id="galeria">
         <div class="section-header reveal">
-            <div class="section-label"><span>Nuestro Espacio</span></div>
-            <h2 class="section-title">Conoce <em>GG Beauty</em></h2>
+            <div class="section-label"><span data-i18n="gallery.label">Nuestro Espacio</span></div>
+            <h2 class="section-title"><span data-i18n="gallery.title">Conoce GG Beauty</span></h2>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item reveal-scale stagger-1">
-                <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&auto=format&fit=crop" alt="Sala de Tratamientos">
-                <div class="gallery-overlay">
-                    <div>
-                        <h4>Sala de Tratamientos</h4>
-                        <p>Espacio diseñado para tu bienestar</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item reveal-scale stagger-2">
-                <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&auto=format&fit=crop" alt="Tratamiento Facial">
-                <div class="gallery-overlay">
-                    <div>
-                        <h4>Tratamiento Facial</h4>
-                        <p>Cuidado personalizado</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item reveal-scale stagger-3">
-                <img src="https://images.unsplash.com/photo-1519823551278-64ac927ac4fb?w=600&auto=format&fit=crop" alt="Manicura OPI">
-                <div class="gallery-overlay">
-                    <div>
-                        <h4>Manicura OPI</h4>
-                        <p>Productos premium</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item reveal-scale stagger-4">
-                <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&auto=format&fit=crop" alt="Masajes">
-                <div class="gallery-overlay">
-                    <div>
-                        <h4>Masajes</h4>
-                        <p>Relajación y bienestar</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item reveal-scale stagger-5">
-                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&auto=format&fit=crop" alt="Extensiones">
-                <div class="gallery-overlay">
-                    <div>
-                        <h4>Extensiones</h4>
-                        <p>Pestañas perfectas</p>
-                    </div>
-                </div>
-            </div>
+            <div class="gallery-item reveal-scale stagger-1"><img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800&auto=format&fit=crop" alt="Sala"><div class="gallery-overlay"><div><h4 data-i18n="gallery.g1">Sala de Tratamientos</h4><p data-i18n="gallery.g1d">Espacio diseñado para tu bienestar</p></div></div></div>
+            <div class="gallery-item reveal-scale stagger-2"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&auto=format&fit=crop" alt="Facial"><div class="gallery-overlay"><div><h4 data-i18n="gallery.g2">Tratamiento Facial</h4><p data-i18n="gallery.g2d">Cuidado personalizado</p></div></div></div>
+            <div class="gallery-item reveal-scale stagger-3"><img src="https://images.unsplash.com/photo-1519823551278-64ac927ac4fb?w=600&auto=format&fit=crop" alt="Manicura"><div class="gallery-overlay"><div><h4 data-i18n="gallery.g3">Manicura OPI</h4><p data-i18n="gallery.g3d">Productos premium</p></div></div></div>
+            <div class="gallery-item reveal-scale stagger-4"><img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&auto=format&fit=crop" alt="Masaje"><div class="gallery-overlay"><div><h4 data-i18n="gallery.g4">Masajes</h4><p data-i18n="gallery.g4d">Relajación y bienestar</p></div></div></div>
+            <div class="gallery-item reveal-scale stagger-5"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&auto=format&fit=crop" alt="Extensiones"><div class="gallery-overlay"><div><h4 data-i18n="gallery.g5">Extensiones</h4><p data-i18n="gallery.g5d">Pestañas perfectas</p></div></div></div>
         </div>
     </section>
 
@@ -268,91 +200,36 @@
     <!-- Testimonials Section -->
     <section class="testimonials" id="opiniones">
         <div class="section-header reveal">
-            <div class="section-label"><span>Opiniones</span></div>
-            <h2 class="section-title">Lo que Dicen Nuestras <em>Clientas</em></h2>
+            <div class="section-label"><span data-i18n="testimonials.label">Opiniones</span></div>
+            <h2 class="section-title"><span data-i18n="testimonials.title">Lo que Dicen Nuestras Clientas</span></h2>
         </div>
         <div class="testimonials-slider reveal">
-            <div class="testimonial-item active">
-                <div class="testimonial-quote">"</div>
-                <p class="testimonial-text">Como profesional es de 10. Los tratamientos por láser son 100% efectivos. Precios competitivos y el trato con el cliente maravilloso.</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">J</div>
-                    <div class="testimonial-info">
-                        <h4>Javier F.</h4>
-                        <p>Cliente verificado</p>
-                        <div class="testimonial-rating">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-quote">"</div>
-                <p class="testimonial-text">Trato super agradable. El sitio perfecto para cualquier tratamiento estético. Genoveva es una profesional excepcional.</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">B</div>
-                    <div class="testimonial-info">
-                        <h4>Blanca Á.</h4>
-                        <p>Cliente verificado</p>
-                        <div class="testimonial-rating">★★★★★</div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="testimonial-quote">"</div>
-                <p class="testimonial-text">Toda una profesional. Estoy con tratamiento de cara y espectacular. Totalmente recomendable.</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">I</div>
-                    <div class="testimonial-info">
-                        <h4>Inma M.</h4>
-                        <p>Cliente verificado</p>
-                        <div class="testimonial-rating">★★★★★</div>
-                    </div>
-                </div>
-            </div>
+            <div class="testimonial-item active"><div class="testimonial-quote">"</div><p class="testimonial-text" data-i18n="testimonials.t1">Como profesional es de 10. Los tratamientos por láser son 100% efectivos. Precios competitivos y el trato con el cliente maravilloso.</p><div class="testimonial-author"><div class="testimonial-avatar">J</div><div class="testimonial-info"><h4>Javier F.</h4><p data-i18n="testimonials.verified">Cliente verificado</p><div class="testimonial-rating">★★★★★</div></div></div></div>
+            <div class="testimonial-item"><div class="testimonial-quote">"</div><p class="testimonial-text" data-i18n="testimonials.t2">Trato super agradable. El sitio perfecto para cualquier tratamiento estético. Genoveva es una profesional excepcional.</p><div class="testimonial-author"><div class="testimonial-avatar">B</div><div class="testimonial-info"><h4>Blanca Á.</h4><p data-i18n="testimonials.verified">Cliente verificado</p><div class="testimonial-rating">★★★★★</div></div></div></div>
+            <div class="testimonial-item"><div class="testimonial-quote">"</div><p class="testimonial-text" data-i18n="testimonials.t3">Toda una profesional. Estoy con tratamiento de cara y espectacular. Totalmente recomendable.</p><div class="testimonial-author"><div class="testimonial-avatar">I</div><div class="testimonial-info"><h4>Inma M.</h4><p data-i18n="testimonials.verified">Cliente verificado</p><div class="testimonial-rating">★★★★★</div></div></div></div>
         </div>
-        <div class="testimonial-dots">
-            <div class="testimonial-dot active" data-index="0"></div>
-            <div class="testimonial-dot" data-index="1"></div>
-            <div class="testimonial-dot" data-index="2"></div>
-        </div>
+        <div class="testimonial-dots"><div class="testimonial-dot active" data-index="0"></div><div class="testimonial-dot" data-index="1"></div><div class="testimonial-dot" data-index="2"></div></div>
     </section>
 
     <!-- Team Section -->
     <section class="team" id="equipo">
         <div class="section-header reveal">
-            <div class="section-label"><span>Nuestro Equipo</span></div>
-            <h2 class="section-title">Expertas en <em>Belleza</em></h2>
+            <div class="section-label"><span data-i18n="team.label">Nuestro Equipo</span></div>
+            <h2 class="section-title"><span data-i18n="team.title">Expertas en Belleza</span></h2>
         </div>
         <div class="team-grid">
-            <div class="team-card reveal stagger-1">
-                <div class="team-image">
-                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&auto=format&fit=crop" alt="Genoveva Ganeva">
-                </div>
-                <h3 class="team-name">Genoveva Ganeva</h3>
-                <p class="team-role">Fundadora & Directora</p>
-                <p class="team-specialty">Especialista en tratamientos faciales, láser y medicina estética</p>
-            </div>
-            <div class="team-card reveal stagger-2">
-                <div class="team-image">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop" alt="Equipo Profesional">
-                </div>
-                <h3 class="team-name">Equipo Profesional</h3>
-                <p class="team-role">Especialistas</p>
-                <p class="team-specialty">Manicura, masajes, depilación y tratamientos corporales</p>
-            </div>
+            <div class="team-card reveal stagger-1"><div class="team-image"><img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=600&auto=format&fit=crop" alt="Genoveva"></div><h3 class="team-name">Genoveva Ganeva</h3><p class="team-role" data-i18n="team.role1">Fundadora & Directora</p><p class="team-specialty" data-i18n="team.spec1">Especialista en tratamientos faciales, láser y medicina estética</p></div>
+            <div class="team-card reveal stagger-2"><div class="team-image"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop" alt="Equipo"></div><h3 class="team-name" data-i18n="team.name2">Equipo Profesional</h3><p class="team-role" data-i18n="team.role2">Especialistas</p><p class="team-specialty" data-i18n="team.spec2">Manicura, masajes, depilación y tratamientos corporales</p></div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content reveal">
-            <div class="section-label"><span>¿Lista para Brillar?</span></div>
-            <h2 class="cta-title">
-                Tu Belleza, <em>Nuestra Pasión</em>
-            </h2>
-            <p class="cta-text">
-                Reserva tu cita hoy y descubre por qué nuestras clientas nos valoran con 5 estrellas. Tratamientos personalizados con los mejores productos.
-            </p>
-            <a href="#contacto" class="btn-primary magnetic"><span>Reservar Cita Ahora</span></a>
+            <div class="section-label"><span data-i18n="cta.label">¿Lista para Brillar?</span></div>
+            <h2 class="cta-title"><span data-i18n="cta.title">Tu Belleza, Nuestra Pasión</span></h2>
+            <p class="cta-text" data-i18n="cta.text">Reserva tu cita hoy y descubre por qué nuestras clientas nos valoran con 5 estrellas. Tratamientos personalizados con los mejores productos.</p>
+            <a href="#contacto" class="btn-primary magnetic"><span data-i18n="cta.btn">Reservar Cita Ahora</span></a>
         </div>
     </section>
 
@@ -361,61 +238,31 @@
     <!-- Contact Section -->
     <section class="contact" id="contacto">
         <div class="section-header reveal">
-            <div class="section-label"><span>Contacto</span></div>
-            <h2 class="section-title">Visítanos en <em>Tías</em></h2>
+            <div class="section-label"><span data-i18n="contact.label">Contacto</span></div>
+            <h2 class="section-title"><span data-i18n="contact.title">Visítanos en Tías</span></h2>
         </div>
         <div class="contact-grid">
             <div class="contact-info reveal-left">
                 <h3>GG Beauty Aesthetics</h3>
-                <p>Tu centro de belleza y estética en Lanzarote. Ambiente acogedor, profesionalidad y los mejores productos para ti.</p>
+                <p data-i18n="contact.intro">Tu centro de belleza y estética en Lanzarote. Ambiente acogedor, profesionalidad y los mejores productos para ti.</p>
                 <div class="contact-details">
-                    <div class="contact-detail">
-                        <div class="icon">📍</div>
-                        <div class="info">
-                            <span>Dirección</span>
-                            <p>C. Anzuelo, 11, 8b35510 Tías, Las Palmas</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="icon">🚌</div>
-                        <div class="info">
-                            <span>Transporte</span>
-                            <p>Parada C.C. Atlántico<br>a pocos minutos andando</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="icon">🕐</div>
-                        <div class="info">
-                            <span>Horario</span>
-                            <p>Lun - Vie: 11:00 - 17:00<br>Sáb - Dom: Cerrado</p>
-                        </div>
-                    </div>
+                    <div class="contact-detail"><div class="icon">📍</div><div class="info"><span data-i18n="contact.address_label">Dirección</span><p data-i18n="contact.address">C. Anzuelo, 11, 8b35510 Tías, Las Palmas</p></div></div>
+                    <div class="contact-detail"><div class="icon">🚌</div><div class="info"><span data-i18n="contact.transport_label">Transporte</span><p data-i18n="contact.transport">Parada C.C. Atlántico, a pocos minutos andando</p></div></div>
+                    <div class="contact-detail"><div class="icon">🕐</div><div class="info"><span data-i18n="contact.hours_label">Horario</span><p data-i18n="contact.hours">Lun - Vie: 11:00 - 17:00<br>Sáb - Dom: Cerrado</p></div></div>
                 </div>
             </div>
             <form class="contact-form reveal-right" onsubmit="handleSubmit(event)">
                 <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" placeholder=" " required>
-                        <label>Nombre</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder=" " required>
-                        <label>Apellido</label>
-                    </div>
+                    <div class="form-group"><input type="text" placeholder=" " required><label data-i18n="form.name">Nombre</label></div>
+                    <div class="form-group"><input type="text" placeholder=" " required><label data-i18n="form.surname">Apellido</label></div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group">
-                        <input type="email" placeholder=" " required>
-                        <label>Email</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder=" ">
-                        <label>Teléfono</label>
-                    </div>
+                    <div class="form-group"><input type="email" placeholder=" " required><label>Email</label></div>
+                    <div class="form-group"><input type="tel" placeholder=" "><label data-i18n="form.phone">Teléfono</label></div>
                 </div>
                 <div class="form-group">
                     <select required>
-                        <option value="" disabled selected>Tratamiento de interés</option>
+                        <option value="" disabled selected data-i18n="form.select">Tratamiento de interés</option>
                         <option>Tratamiento Facial</option>
                         <option>Depilación Láser</option>
                         <option>Depilación con Cera</option>
@@ -429,11 +276,8 @@
                         <option>Otro tratamiento</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <textarea placeholder=" "></textarea>
-                    <label>Mensaje o dudas</label>
-                </div>
-                <button type="submit" class="form-submit magnetic">Solicitar Cita</button>
+                <div class="form-group"><textarea placeholder=" "></textarea><label data-i18n="form.message">Mensaje o dudas</label></div>
+                <button type="submit" class="form-submit magnetic" data-i18n="form.submit">Solicitar Cita</button>
             </form>
         </div>
     </section>
@@ -442,10 +286,8 @@
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo">
-                    <img src="./assets/images/Logo.png" alt="GG Beauty Aesthetics - Genoveva Ganeva">
-                </div>
-                <p>Genoveva Ganeva Beauty and Aesthetic Clinic. Tu centro de confianza en Lanzarote para tratamientos de belleza y estética avanzada.</p>
+                <div class="logo"><img src="./assets/images/Logo.png" alt="GG Beauty"></div>
+                <p data-i18n="footer.brand">Genoveva Ganeva Beauty and Aesthetic Clinic. Tu centro de confianza en Lanzarote para tratamientos de belleza y estética avanzada.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/gg_beauty_aesthetics/" target="_blank" class="magnetic">Ig</a>
                     <a href="#" class="magnetic">Fb</a>
@@ -453,7 +295,7 @@
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Faciales</h4>
+                <h4 data-i18n="footer.facials">Faciales</h4>
                 <ul>
                     <li><a href="#">Peeling Láser Carbón</a></li>
                     <li><a href="#">Radiofrecuencia Facial</a></li>
@@ -464,7 +306,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Corporal</h4>
+                <h4 data-i18n="footer.body">Corporal</h4>
                 <ul>
                     <li><a href="#">Radiofrecuencia Corporal</a></li>
                     <li><a href="#">Presoterapia</a></li>
@@ -474,7 +316,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Belleza</h4>
+                <h4 data-i18n="footer.beauty">Belleza</h4>
                 <ul>
                     <li><a href="#">Depilación Láser</a></li>
                     <li><a href="#">Manicura OPI</a></li>
@@ -486,11 +328,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 GG Beauty Aesthetics • Genoveva Ganeva • Tías, Lanzarote</p>
+            <p data-i18n="footer.copy">© 2026 GG Beauty Aesthetics • Genoveva Ganeva • Tías, Lanzarote</p>
             <div class="footer-bottom-links">
-                <a href="#">Privacidad</a>
-                <a href="#">Términos</a>
-                <a href="#">Cookies</a>
+                <a href="#" data-i18n="footer.privacy">Privacidad</a>
+                <a href="#" data-i18n="footer.terms">Términos</a>
+                <a href="#" data-i18n="footer.cookies">Cookies</a>
             </div>
         </div>
     </footer>
@@ -498,9 +340,8 @@
     <!-- Back to Top -->
     <div class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 
-    <!-- Dynamic Services Loader -->
+    <!-- Scripts -->
     <script src="js/render-services.js"></script>
-    <!-- Main Application Script -->
     <script src="js/main.js"></script>
 </body>
 </html>
