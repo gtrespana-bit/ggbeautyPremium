@@ -1,8 +1,6 @@
 /* =========================================
    1. CSS VARIABLES & GLOBAL RESET
    ========================================= */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap');
-
 :root {
     --kaizen-gold: #c9a96e;
     --kaizen-gold-light: #e8d5a3;
@@ -114,7 +112,7 @@ body {
 }
 
 /* =========================================
-   3. NAVIGATION
+   3. NAVIGATION & HEADER
    ========================================= */
 .navbar {
     position: fixed; top: 0; left: 0; right: 0;
@@ -122,36 +120,36 @@ body {
     padding: 22px 50px;
     display: flex; justify-content: space-between; align-items: center;
     z-index: 1000;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background: transparent;
     box-sizing: border-box;
+    min-height: 85px;
 }
 .navbar.scrolled {
-    padding: 14px 50px;
+    padding: 12px 50px;
     background: rgba(13, 13, 15, 0.94);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
+    min-height: 70px;
 }
 
-/* Logo Desktop: Más grande y desplazado a la derecha */
 .nav-logo {
     display: flex; align-items: center; text-decoration: none;
     position: relative; z-index: 1002;
-    margin-left: 80px; /* Desplazamiento a la derecha */
+    margin-left: 80px;
 }
 .nav-logo img {
-    height: 85px; width: auto; /* Tamaño aumentado */
+    height: 85px; width: auto;
     transition: all 0.3s ease; display: block;
 }
 .navbar.scrolled .nav-logo img { height: 70px; }
 
-/* Language Selector */
+/* Language Selector (Desktop) */
 .language-selector {
     margin-left: auto;
     margin-right: 20px;
 }
-
 .language-selector select {
     background: transparent;
     border: 1px solid var(--kaizen-gold);
@@ -163,22 +161,15 @@ body {
     cursor: pointer;
     border-radius: 2px;
     outline: none;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
-
 .language-selector select:hover {
     background: var(--kaizen-gold);
     color: var(--kaizen-volcanic);
 }
-
 .language-selector select option {
     background: var(--kaizen-volcanic);
     color: var(--kaizen-white);
-}
-
-.navbar.scrolled .language-selector select {
-    border-color: var(--kaizen-gold);
-    color: var(--kaizen-gold);
 }
 
 .nav-links { display: flex; gap: 35px; list-style: none; align-items: center; }
@@ -211,33 +202,34 @@ body {
 
 .hamburger {
     display: none; flex-direction: column; gap: 6px;
-    cursor: pointer; z-index: 1002;
+    cursor: pointer; z-index: 1002; padding: 5px;
 }
 .hamburger span {
-    width: 28px; height: 1px; background: var(--kaizen-gold);
-    transition: all 0.3s ease;
+    width: 28px; height: 2px; background: var(--kaizen-gold);
+    transition: all 0.3s ease; border-radius: 2px;
 }
 
-/* Mobile Menu */
+/* Mobile Menu Overlay */
 .mobile-menu {
     position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
-    background: rgba(13, 13, 15, 0.98); backdrop-filter: blur(30px);
+    background: rgba(13, 13, 15, 0.98); backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     z-index: 9999; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; gap: 28px;
+    align-items: center; justify-content: center; gap: 30px;
     transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu.open { right: 0; }
 .mobile-menu a {
-    font-family: 'Playfair Display', serif; font-size: 1.9rem;
+    font-family: 'Playfair Display', serif; font-size: 1.8rem;
     color: var(--kaizen-white); text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; padding: 10px 0;
 }
 .mobile-menu a:hover { color: var(--kaizen-gold); }
 .mobile-close {
-    position: absolute; top: 28px; right: 28px;
-    width: 38px; height: 38px; display: flex; align-items: center;
+    position: absolute; top: 20px; right: 20px;
+    width: 40px; height: 40px; display: flex; align-items: center;
     justify-content: center; color: var(--kaizen-gold);
-    font-size: 1.4rem; cursor: pointer; background: none; border: none;
+    font-size: 1.5rem; cursor: pointer; background: none; border: none;
 }
 
 /* =========================================
@@ -618,7 +610,7 @@ section { position: relative; z-index: 2; }
 .service-link:hover { gap: 15px; }
 
 /* =========================================
-   8. GALLERY, TESTIMONIALS, TEAM, CTA, CONTACT
+   8. GALLERY
    ========================================= */
 .gallery { padding: 140px 50px; }
 .gallery-grid {
@@ -653,6 +645,9 @@ section { position: relative; z-index: 2; }
 }
 .gallery-item:hover .gallery-overlay p { transform: translateY(0); }
 
+/* =========================================
+   9. TESTIMONIALS
+   ========================================= */
 .testimonials { padding: 140px 50px; overflow: hidden; background: var(--kaizen-lava); }
 .testimonials-slider { max-width: 850px; margin: 0 auto; position: relative; }
 .testimonial-item { text-align: center; display: none; }
@@ -701,6 +696,9 @@ section { position: relative; z-index: 2; }
 }
 .testimonial-dot.active { background: var(--kaizen-gold); width: 56px; }
 
+/* =========================================
+   10. TEAM
+   ========================================= */
 .team {
     padding: 140px 50px;
     background: linear-gradient(180deg, var(--kaizen-lava), var(--kaizen-volcanic));
@@ -737,6 +735,9 @@ section { position: relative; z-index: 2; }
     margin-top: 6px; font-style: italic;
 }
 
+/* =========================================
+   11. CTA SECTION
+   ========================================= */
 .cta-section {
     padding: 130px 50px; text-align: center;
     position: relative; overflow: hidden;
@@ -758,6 +759,9 @@ section { position: relative; z-index: 2; }
     margin-bottom: 48px;
 }
 
+/* =========================================
+   12. CONTACT & FORM
+   ========================================= */
 .contact { padding: 140px 50px; background: var(--kaizen-lava); }
 .contact-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 75px;
@@ -828,44 +832,28 @@ section { position: relative; z-index: 2; }
 }
 
 /* =========================================
-   9. FOOTER
+   13. FOOTER
    ========================================= */
 .footer { padding: 75px 50px 38px; border-top: 1px solid var(--glass-border); }
 .footer-grid {
     display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 55px; max-width: 1350px; margin: 0 auto; margin-bottom: 55px;
 }
-
-/* Footer Brand: Centrado y Logo más grande */
-.footer-brand {
-    text-align: center;
-}
+.footer-brand { text-align: center; }
 .footer-brand .logo {
     display: flex; justify-content: center; margin-bottom: 18px;
 }
 .footer-brand .logo img {
-    height: 95px; width: auto; /* Tamaño aumentado */
+    height: 95px; width: auto;
 }
 .footer-brand p {
     font-family: 'Cormorant Garamond', serif; font-size: 0.98rem;
     color: rgba(255, 255, 255, 0.42); line-height: 1.85;
-    max-width: 320px;
-    margin: 0 auto; /* Centrar el texto debajo del logo */
+    max-width: 320px; margin: 0 auto 24px;
 }
 .footer-social {
-    display: flex; justify-content: center; gap: 14px; margin-top: 24px;
+    display: flex; justify-content: center; gap: 14px; margin-top: 10px;
 }
-
-.footer-col h4 {
-    font-family: 'Playfair Display', serif; font-size: 0.98rem;
-    margin-bottom: 24px; color: var(--kaizen-white);
-}
-.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
-.footer-col ul a {
-    color: rgba(255, 255, 255, 0.42); text-decoration: none;
-    font-size: 0.83rem; transition: color 0.3s ease;
-}
-.footer-col ul a:hover { color: var(--kaizen-gold); }
 .footer-social a {
     width: 38px; height: 38px; border: 1px solid var(--glass-border);
     display: flex; align-items: center; justify-content: center;
@@ -876,6 +864,16 @@ section { position: relative; z-index: 2; }
     border-color: var(--kaizen-gold); color: var(--kaizen-gold);
     transform: translateY(-3px);
 }
+.footer-col h4 {
+    font-family: 'Playfair Display', serif; font-size: 0.98rem;
+    margin-bottom: 24px; color: var(--kaizen-white);
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.footer-col ul a {
+    color: rgba(255, 255, 255, 0.42); text-decoration: none;
+    font-size: 0.83rem; transition: color 0.3s ease;
+}
+.footer-col ul a:hover { color: var(--kaizen-gold); }
 .footer-bottom {
     display: flex; justify-content: space-between; align-items: center;
     padding-top: 38px; border-top: 1px solid var(--glass-border);
@@ -894,7 +892,7 @@ section { position: relative; z-index: 2; }
 .footer-bottom-links a:hover { color: var(--kaizen-gold); }
 
 /* =========================================
-   10. ANIMATIONS & UTILITIES
+   14. ANIMATIONS & UTILITIES
    ========================================= */
 .reveal { opacity: 0; transform: translateY(55px); transition: all 1s cubic-bezier(0.4, 0, 0.2, 1); }
 .reveal.active { opacity: 1; transform: translateY(0); }
@@ -934,7 +932,7 @@ section { position: relative; z-index: 2; }
 }
 
 /* =========================================
-   11. RESPONSIVE BREAKPOINTS
+   15. RESPONSIVE BREAKPOINTS
    ========================================= */
 @media (max-width: 1024px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -946,7 +944,7 @@ section { position: relative; z-index: 2; }
     .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
     
-    /* Tablet Logo Adjustments */
+    /* Tablet Logo & Nav Adjustments */
     .nav-logo { margin-left: 40px; }
     .nav-logo img { height: 75px; }
     .navbar.scrolled .nav-logo img { height: 60px; }
@@ -956,12 +954,12 @@ section { position: relative; z-index: 2; }
 @media (max-width: 768px) {
     .navbar { 
         padding: 14px 20px;
-        justify-content: flex-end; /* Empuja hamburguesa y selector a la derecha */
+        justify-content: flex-end; /* Empuja hamburguesa a la derecha */
         align-items: center;
-        min-height: 70px; /* Evita que se colapse demasiado */
+        min-height: 80px; /* Evita colapso */
     }
     
-    /* Logo centrado y sin cortes */
+    /* Logo centrado vertical y horizontalmente, sin cortes */
     .nav-logo {
         position: absolute;
         left: 50%;
@@ -970,39 +968,56 @@ section { position: relative; z-index: 2; }
         margin-left: 0;
         z-index: 10;
     }
-    .nav-logo img { height: 60px; max-width: 70vw; }
+    .nav-logo img { height: 60px; max-width: 75vw; }
     
     .navbar.scrolled {
         padding: 10px 20px;
-        min-height: 60px; /* Mantiene altura mínima al hacer scroll */
+        min-height: 65px;
     }
     .navbar.scrolled .nav-logo img { height: 50px; }
 
-    /* Selector de idioma abajo a la izquierda */
+    /* Selector de idioma fijo abajo-izquierda, sin lag */
     .language-selector {
-        position: fixed;
-        bottom: 20px;
-        left: 20px;
-        margin: 0;
-        z-index: 9998;
+        position: fixed !important;
+        bottom: 20px !important;
+        left: 20px !important;
+        top: auto !important;
+        right: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        z-index: 9998 !important;
+        pointer-events: auto !important;
     }
     .language-selector select {
-        padding: 10px 14px;
-        font-size: 0.85rem;
-        background: rgba(13, 13, 15, 0.95);
-        backdrop-filter: blur(10px);
-        border-color: var(--kaizen-gold);
+        padding: 10px 14px !important;
+        font-size: 0.85rem !important;
+        background: rgba(13, 13, 15, 0.92) !important;
+        color: var(--kaizen-gold) !important;
+        border: 1px solid var(--kaizen-gold) !important;
+        border-radius: 4px !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        transition: none !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.4) !important;
+        cursor: pointer !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c9a96e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 12px;
+        padding-right: 28px !important;
     }
 
     .nav-links { display: none; }
     .hamburger { 
         display: flex; 
         margin-left: 0; 
-        order: 1; /* Siempre a la derecha */
+        order: 1;
         z-index: 1002;
     }
     
-    /* Mobile Menu Overlay */
     .mobile-menu {
         background: rgba(13, 13, 15, 0.98);
         backdrop-filter: blur(20px);
@@ -1041,8 +1056,12 @@ section { position: relative; z-index: 2; }
     .stats-grid { grid-template-columns: 1fr; }
     .team-grid { grid-template-columns: 1fr; }
     
-    /* Móvil Pequeño Ajustes */
-    .nav-logo img { height: 65px; }
-    .navbar.scrolled .nav-logo img { height: 55px; }
-    .footer-brand .logo img { height: 75px; }
+    .nav-logo img { height: 55px; }
+    .navbar.scrolled .nav-logo img { height: 45px; }
+    .footer-brand .logo img { height: 65px; }
+    
+    .language-selector select {
+        padding: 8px 12px !important;
+        font-size: 0.8rem !important;
+    }
 }
