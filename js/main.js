@@ -18,25 +18,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para aplicar el idioma al DOM
-    window.applyLanguage = function(lang) {
+     window.applyLanguage = function(lang) {
         currentLang = lang;
         localStorage.setItem('gg_lang', lang);
         
-        // Actualiza textos
+        // Actualizar textos estáticos
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[key] && translations[key][lang]) {
-                el.innerHTML = translations[key][lang]; // innerHTML permite usar <br>
+                el.innerHTML = translations[key][lang];
             }
         });
 
-        // Actualiza el selector desplegable
+        // Actualizar selector
         const selector = document.getElementById('languageSelect');
         if (selector) selector.value = lang;
-
-        // Actualiza atributo lang del HTML
         document.documentElement.lang = lang;
-    }
+
+        // ✅ NUEVO: Actualizar servicios dinámicamente sin recargar
+        if (typeof window.renderServices === 'function') {
+            window.renderServices(lang);
+        }
+    };
 
     // Función global llamada por el HTML (onchange)
     window.changeLanguage = function(lang) {
