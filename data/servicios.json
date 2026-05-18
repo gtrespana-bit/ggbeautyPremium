@@ -83,35 +83,6 @@
       ]
     },
     {
-      "titulo": "Uñas y Manicura",
-      "servicios": [
-        {
-          "nombre": "Manicura Tradicional OPI",
-          "precio": "",
-          "duracion": "45 min",
-          "descripcion": "Limpieza, limado, cutículas y esmaltado con productos OPI de máxima calidad. Duración y brillo garantizados."
-        },
-        {
-          "nombre": "Manicura Semipermanente",
-          "precio": "",
-          "duracion": "1 hora",
-          "descripcion": "Esmaltado semipermanente que dura hasta 3 semanas. Amplia gama de colores OPI disponibles."
-        },
-        {
-          "nombre": "Pedicura Tradicional",
-          "precio": "",
-          "duracion": "1 hora",
-          "descripcion": "Cuidado completo de pies: limpieza, limado, cutículas, exfoliación y esmaltado."
-        },
-        {
-          "nombre": "Pedicura Spa",
-          "precio": "",
-          "duracion": "1h 15min",
-          "descripcion": "Tratamiento relajante con baño de pies, exfoliación, mascarilla, masaje y esmaltado."
-        }
-      ]
-    },
-    {
       "titulo": "Pestañas y Cejas",
       "servicios": [
         {
@@ -200,6 +171,35 @@
           "precio": "",
           "duracion": "sesión",
           "descripcion": "Láser facial para mejorar textura, manchas y signos de envejecimiento. Piel renovada."
+        }
+      ]
+    },
+    {
+      "titulo": "Uñas y Manicura",
+      "servicios": [
+        {
+          "nombre": "Manicura Tradicional OPI",
+          "precio": "",
+          "duracion": "45 min",
+          "descripcion": "Limpieza, limado, cutículas y esmaltado con productos OPI de máxima calidad. Duración y brillo garantizados."
+        },
+        {
+          "nombre": "Manicura Semipermanente",
+          "precio": "",
+          "duracion": "1 hora",
+          "descripcion": "Esmaltado semipermanente que dura hasta 3 semanas. Amplia gama de colores OPI disponibles."
+        },
+        {
+          "nombre": "Pedicura Tradicional",
+          "precio": "",
+          "duracion": "1 hora",
+          "descripcion": "Cuidado completo de pies: limpieza, limado, cutículas, exfoliación y esmaltado."
+        },
+        {
+          "nombre": "Pedicura Spa",
+          "precio": "",
+          "duracion": "1h 15min",
+          "descripcion": "Tratamiento relajante con baño de pies, exfoliación, mascarilla, masaje y esmaltado."
         }
       ]
     }
