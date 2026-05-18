@@ -135,4 +135,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========== VIDEO FALLBACK ==========
     const heroVideo = document.querySelector('.hero-video');
     if(heroVideo) { heroVideo.addEventListener('error', ()=>console.log('Video fallback activated')); heroVideo.play().catch(()=>{}); }
+
+    // Language Selector Function
+function changeLanguage(lang) {
+    // Aquí puedes implementar la lógica de cambio de idioma
+    console.log('Language changed to:', lang);
+    
+    // Por ahora solo es visual
+    const messages = {
+        'es': 'Idioma cambiado a Español',
+        'en': 'Language changed to English',
+        'de': 'Sprache geändert zu Deutsch'
+    };
+    
+    alert(messages[lang] || 'Idioma cambiado');
+}
 });
+
