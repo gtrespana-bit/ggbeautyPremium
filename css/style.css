@@ -1,6 +1,6 @@
-/* Importación de fuentes */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap');
-
+/* =========================================
+   1. CSS VARIABLES & GLOBAL RESET
+   ========================================= */
 :root {
     --kaizen-gold: #c9a96e;
     --kaizen-gold-light: #e8d5a3;
@@ -17,7 +17,16 @@
     --shadow-gold: rgba(201, 169, 110, 0.25);
 }
 
-html { scroll-behavior: smooth; overflow-x: hidden; }
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -27,7 +36,9 @@ body {
     line-height: 1.6;
 }
 
-/* ========== CUSTOM CURSOR ULTRA FLUIDO ========== */
+/* =========================================
+   2. UI ELEMENTS: CURSOR, LOADER, PROGRESS, PARTICLES
+   ========================================= */
 .cursor {
     width: 24px; height: 24px;
     border: 2px solid var(--kaizen-gold);
@@ -49,7 +60,6 @@ body {
     border-color: var(--kaizen-gold-light);
 }
 
-/* ========== LOADER ========== */
 .loader {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: var(--kaizen-volcanic); z-index: 100000;
@@ -79,7 +89,12 @@ body {
 @keyframes fadeIn { to { opacity: 1; } }
 @keyframes lineGrow { to { width: 180px; } }
 
-/* ========== PARTICLES ========== */
+.progress-bar {
+    position: fixed; top: 0; left: 0; height: 2px;
+    background: linear-gradient(90deg, var(--kaizen-gold), var(--kaizen-rose));
+    z-index: 10001; transition: width 0.1s linear;
+}
+
 .particles-container {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     pointer-events: none; z-index: 1;
@@ -96,43 +111,36 @@ body {
     100% { opacity: 0; transform: translateY(-10vh) scale(1.2); }
 }
 
-/* ========== PROGRESS BAR ========== */
-.progress-bar {
-    position: fixed; top: 0; left: 0; height: 2px;
-    background: linear-gradient(90deg, var(--kaizen-gold), var(--kaizen-rose));
-    z-index: 10001; transition: width 0.1s linear;
-}
-
-/* ========== NAVBAR ========== */
+/* =========================================
+   3. NAVIGATION
+   ========================================= */
 .navbar {
-    position: fixed; top: 0; left: 0; width: 100%;
-    padding: 22px 50px; display: flex; justify-content: space-between; align-items: center;
-    z-index: 1000; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed; top: 0; left: 0; right: 0;
+    width: 100%;
+    padding: 22px 50px;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 1000;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    box-sizing: border-box;
 }
 .navbar.scrolled {
     padding: 14px 50px;
     background: rgba(13, 13, 15, 0.94);
-    backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-bottom: 1px solid var(--glass-border);
 }
 
-/* ===== NAVBAR LOGO ===== */
 .nav-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    position: relative;
-    z-index: 1002;
+    display: flex; align-items: center; text-decoration: none;
+    position: relative; z-index: 1002;
 }
 .nav-logo img {
-    height: 70px;
-    width: auto;
-    transition: all 0.3s ease;
-    display: block;
+    height: 70px; width: auto;
+    transition: all 0.3s ease; display: block;
 }
-.navbar.scrolled .nav-logo img {
-    height: 60px;
-}
+.navbar.scrolled .nav-logo img { height: 60px; }
 
 .nav-links { display: flex; gap: 35px; list-style: none; align-items: center; }
 .nav-links a {
@@ -147,6 +155,7 @@ body {
 }
 .nav-links a:hover { color: var(--kaizen-gold); }
 .nav-links a:hover::before { width: 100%; }
+
 .nav-cta {
     padding: 11px 28px; border: 1px solid var(--kaizen-gold);
     color: var(--kaizen-gold) !important; font-size: 0.68rem !important;
@@ -160,6 +169,7 @@ body {
 }
 .nav-cta:hover { color: var(--kaizen-volcanic) !important; }
 .nav-cta:hover::before { left: 0; }
+
 .hamburger {
     display: none; flex-direction: column; gap: 6px;
     cursor: pointer; z-index: 1002;
@@ -169,7 +179,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* ========== MOBILE MENU ========== */
+/* Mobile Menu */
 .mobile-menu {
     position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
     background: rgba(13, 13, 15, 0.98); backdrop-filter: blur(30px);
@@ -191,14 +201,14 @@ body {
     font-size: 1.4rem; cursor: pointer; background: none; border: none;
 }
 
-/* ========== HERO ========== */
+/* =========================================
+   4. HERO SECTION
+   ========================================= */
 .hero {
     height: 100vh; min-height: 720px; position: relative;
     display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
-.hero-bg {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;
-}
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
 .hero-video {
     position: absolute; top: 50%; left: 50%;
     min-width: 100%; min-height: 100%; width: auto; height: auto;
@@ -355,11 +365,11 @@ body {
     color: rgba(255, 255, 255, 0.35); z-index: 2;
     display: flex; align-items: center; gap: 8px;
 }
-.hero-location::before {
-    content: '📍'; font-size: 0.9rem;
-}
+.hero-location::before { content: '📍'; font-size: 0.9rem; }
 
-/* ========== MARQUEE ========== */
+/* =========================================
+   5. MARQUEE & SECTIONS GENERAL
+   ========================================= */
 .marquee-section {
     padding: 28px 0; border-top: 1px solid var(--glass-border);
     border-bottom: 1px solid var(--glass-border);
@@ -377,8 +387,7 @@ body {
 .marquee-item span {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.4rem; font-style: italic;
-    color: var(--kaizen-gold);
-    font-weight: 500;
+    color: var(--kaizen-gold); font-weight: 500;
 }
 .marquee-item .separator {
     width: 7px; height: 7px; border: 1px solid var(--kaizen-gold);
@@ -389,7 +398,6 @@ body {
     100% { transform: translateX(-50%); }
 }
 
-/* ========== SECTIONS GENERAL ========== */
 section { position: relative; z-index: 2; }
 .section-header { text-align: center; margin-bottom: 75px; }
 .section-label {
@@ -409,7 +417,9 @@ section { position: relative; z-index: 2; }
 }
 .section-title em { font-style: italic; color: var(--kaizen-gold); }
 
-/* ========== ABOUT ========== */
+/* =========================================
+   6. ABOUT & STATS
+   ========================================= */
 .about { padding: 140px 50px; }
 .about-grid {
     display: grid; grid-template-columns: 1fr 1fr;
@@ -472,7 +482,6 @@ section { position: relative; z-index: 2; }
 }
 .about-btn-wrapper { margin-top: 8px; display: inline-block; }
 
-/* ========== STATS ========== */
 .stats {
     padding: 90px 50px;
     border-top: 1px solid var(--glass-border);
@@ -496,14 +505,14 @@ section { position: relative; z-index: 2; }
     margin: 13px auto 0; opacity: 0.28;
 }
 
-/* ========== SERVICES CATEGORIES ========== */
+/* =========================================
+   7. SERVICES
+   ========================================= */
 .services {
     padding: 140px 50px;
     background: linear-gradient(180deg, var(--kaizen-volcanic), var(--kaizen-lava), var(--kaizen-volcanic));
 }
-.services-category {
-    margin-bottom: 90px;
-}
+.services-category { margin-bottom: 90px; }
 .services-category:last-child { margin-bottom: 0; }
 .category-title {
     font-family: 'Playfair Display', serif;
@@ -569,7 +578,9 @@ section { position: relative; z-index: 2; }
 }
 .service-link:hover { gap: 15px; }
 
-/* ========== GALLERY ========== */
+/* =========================================
+   8. GALLERY, TESTIMONIALS, TEAM, CTA, CONTACT
+   ========================================= */
 .gallery { padding: 140px 50px; }
 .gallery-grid {
     display: grid; grid-template-columns: repeat(4, 1fr);
@@ -603,7 +614,6 @@ section { position: relative; z-index: 2; }
 }
 .gallery-item:hover .gallery-overlay p { transform: translateY(0); }
 
-/* ========== TESTIMONIALS ========== */
 .testimonials { padding: 140px 50px; overflow: hidden; background: var(--kaizen-lava); }
 .testimonials-slider { max-width: 850px; margin: 0 auto; position: relative; }
 .testimonial-item { text-align: center; display: none; }
@@ -652,7 +662,6 @@ section { position: relative; z-index: 2; }
 }
 .testimonial-dot.active { background: var(--kaizen-gold); width: 56px; }
 
-/* ========== TEAM ========== */
 .team {
     padding: 140px 50px;
     background: linear-gradient(180deg, var(--kaizen-lava), var(--kaizen-volcanic));
@@ -668,9 +677,7 @@ section { position: relative; z-index: 2; }
     margin-bottom: 22px; position: relative; overflow: hidden;
     transition: all 0.5s ease; border-radius: 3px;
 }
-.team-image img {
-    width: 100%; height: 100%; object-fit: cover;
-}
+.team-image img { width: 100%; height: 100%; object-fit: cover; }
 .team-image::before {
     content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to top, rgba(13, 13, 15, 0.92), transparent 55%);
@@ -691,7 +698,6 @@ section { position: relative; z-index: 2; }
     margin-top: 6px; font-style: italic;
 }
 
-/* ========== CTA SECTION ========== */
 .cta-section {
     padding: 130px 50px; text-align: center;
     position: relative; overflow: hidden;
@@ -713,7 +719,6 @@ section { position: relative; z-index: 2; }
     margin-bottom: 48px;
 }
 
-/* ========== CONTACT ========== */
 .contact { padding: 140px 50px; background: var(--kaizen-lava); }
 .contact-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 75px;
@@ -783,22 +788,16 @@ section { position: relative; z-index: 2; }
     box-shadow: 0 14px 38px var(--shadow-gold);
 }
 
-/* ========== FOOTER ========== */
+/* =========================================
+   9. FOOTER
+   ========================================= */
 .footer { padding: 75px 50px 38px; border-top: 1px solid var(--glass-border); }
 .footer-grid {
     display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 55px; max-width: 1350px; margin: 0 auto; margin-bottom: 55px;
 }
-
-/* ===== FOOTER LOGO ===== */
-.footer-brand .logo {
-    margin-bottom: 18px;
-}
-.footer-brand .logo img {
-    height: 80px;
-    width: auto;
-}
-
+.footer-brand .logo { margin-bottom: 18px; }
+.footer-brand .logo img { height: 80px; width: auto; }
 .footer-brand p {
     font-family: 'Cormorant Garamond', serif; font-size: 0.98rem;
     color: rgba(255, 255, 255, 0.42); line-height: 1.85;
@@ -842,7 +841,9 @@ section { position: relative; z-index: 2; }
 }
 .footer-bottom-links a:hover { color: var(--kaizen-gold); }
 
-/* ========== SCROLL ANIMATIONS ========== */
+/* =========================================
+   10. ANIMATIONS & UTILITIES
+   ========================================= */
 .reveal { opacity: 0; transform: translateY(55px); transition: all 1s cubic-bezier(0.4, 0, 0.2, 1); }
 .reveal.active { opacity: 1; transform: translateY(0); }
 .reveal-left { opacity: 0; transform: translateX(-55px); transition: all 1s cubic-bezier(0.4, 0, 0.2, 1); }
@@ -858,17 +859,13 @@ section { position: relative; z-index: 2; }
 .stagger-5 { transition-delay: 0.45s; }
 .stagger-6 { transition-delay: 0.54s; }
 
-/* ========== MAGNETIC BUTTON ========== */
 .magnetic { transition: transform 0.28s ease; }
-
-/* ========== SECTION DIVIDER ========== */
 .section-divider {
     width: 100%; height: 1px;
     background: linear-gradient(90deg, transparent, var(--kaizen-gold), transparent);
     opacity: 0.18;
 }
 
-/* ========== BACK TO TOP ========== */
 .back-to-top {
     position: fixed; bottom: 38px; right: 38px;
     width: 48px; height: 48px; border: 1px solid var(--kaizen-gold);
@@ -884,7 +881,9 @@ section { position: relative; z-index: 2; }
     transform: translateY(-4px);
 }
 
-/* ========== RESPONSIVE ========== */
+/* =========================================
+   11. RESPONSIVE BREAKPOINTS
+   ========================================= */
 @media (max-width: 1024px) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .team-grid { grid-template-columns: 1fr; max-width: 500px; }
