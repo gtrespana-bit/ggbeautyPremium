@@ -920,7 +920,7 @@ section { position: relative; z-index: 2; }
 @media (max-width: 768px) {
     .navbar { 
         padding: 16px 20px;
-        justify-content: center; /* Centrar navbar en móvil */
+        justify-content: space-between; /* ← CAMBIA de 'center' a 'space-between' */
     }
     
     /* Móvil Logo Header: Centrado y más grande */
