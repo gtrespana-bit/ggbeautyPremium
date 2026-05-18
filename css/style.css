@@ -1,6 +1,8 @@
 /* =========================================
    1. CSS VARIABLES & GLOBAL RESET
    ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap');
+
 :root {
     --kaizen-gold: #c9a96e;
     --kaizen-gold-light: #e8d5a3;
@@ -132,15 +134,17 @@ body {
     border-bottom: 1px solid var(--glass-border);
 }
 
+/* Logo Desktop: Más grande y desplazado a la derecha */
 .nav-logo {
     display: flex; align-items: center; text-decoration: none;
     position: relative; z-index: 1002;
+    margin-left: 80px; /* Desplazamiento a la derecha */
 }
 .nav-logo img {
-    height: 70px; width: auto;
+    height: 85px; width: auto; /* Tamaño aumentado */
     transition: all 0.3s ease; display: block;
 }
-.navbar.scrolled .nav-logo img { height: 60px; }
+.navbar.scrolled .nav-logo img { height: 70px; }
 
 .nav-links { display: flex; gap: 35px; list-style: none; align-items: center; }
 .nav-links a {
@@ -796,13 +800,27 @@ section { position: relative; z-index: 2; }
     display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 55px; max-width: 1350px; margin: 0 auto; margin-bottom: 55px;
 }
-.footer-brand .logo { margin-bottom: 18px; }
-.footer-brand .logo img { height: 80px; width: auto; }
+
+/* Footer Brand: Centrado y Logo más grande */
+.footer-brand {
+    text-align: center;
+}
+.footer-brand .logo {
+    display: flex; justify-content: center; margin-bottom: 18px;
+}
+.footer-brand .logo img {
+    height: 95px; width: auto; /* Tamaño aumentado */
+}
 .footer-brand p {
     font-family: 'Cormorant Garamond', serif; font-size: 0.98rem;
     color: rgba(255, 255, 255, 0.42); line-height: 1.85;
     max-width: 320px;
+    margin: 0 auto; /* Centrar el texto debajo del logo */
 }
+.footer-social {
+    display: flex; justify-content: center; gap: 14px; margin-top: 24px;
+}
+
 .footer-col h4 {
     font-family: 'Playfair Display', serif; font-size: 0.98rem;
     margin-bottom: 24px; color: var(--kaizen-white);
@@ -813,7 +831,6 @@ section { position: relative; z-index: 2; }
     font-size: 0.83rem; transition: color 0.3s ease;
 }
 .footer-col ul a:hover { color: var(--kaizen-gold); }
-.footer-social { display: flex; gap: 14px; margin-top: 24px; }
 .footer-social a {
     width: 38px; height: 38px; border: 1px solid var(--glass-border);
     display: flex; align-items: center; justify-content: center;
@@ -893,15 +910,29 @@ section { position: relative; z-index: 2; }
     }
     .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
-    .nav-logo img { height: 55px; }
-    .navbar.scrolled .nav-logo img { height: 48px; }
-    .footer-brand .logo img { height: 65px; }
+    
+    /* Tablet Logo Adjustments */
+    .nav-logo img { height: 75px; }
+    .navbar.scrolled .nav-logo img { height: 60px; }
+    .footer-brand .logo img { height: 85px; }
 }
 
 @media (max-width: 768px) {
-    .navbar { padding: 16px 20px; }
+    .navbar { 
+        padding: 16px 20px;
+        justify-content: center; /* Centrar navbar en móvil */
+    }
+    
+    /* Móvil Logo Header: Centrado y más grande */
+    .nav-logo {
+        margin-left: 0; /* Eliminar desplazamiento */
+    }
+    .nav-logo img { height: 75px; }
+    .navbar.scrolled .nav-logo img { height: 65px; }
+
     .nav-links { display: none; }
     .hamburger { display: flex; }
+    
     .about-grid { grid-template-columns: 1fr; gap: 55px; }
     .about-image-wrapper { height: 380px; }
     .services-grid { grid-template-columns: 1fr; }
@@ -927,15 +958,17 @@ section { position: relative; z-index: 2; }
     .btn-primary, .btn-secondary { width: 100%; max-width: 270px; text-align: center; }
     .hero-location { display: none; }
     .about-features { grid-template-columns: 1fr; }
-    .nav-logo img { height: 50px; }
-    .navbar.scrolled .nav-logo img { height: 44px; }
-    .footer-brand .logo img { height: 65px; }
+
+    /* Móvil Logo Footer: Centrado y más grande */
+    .footer-brand .logo img { height: 85px; }
 }
 
 @media (max-width: 480px) {
     .stats-grid { grid-template-columns: 1fr; }
     .team-grid { grid-template-columns: 1fr; }
-    .nav-logo img { height: 44px; }
-    .navbar.scrolled .nav-logo img { height: 38px; }
-    .footer-brand .logo img { height: 55px; }
+    
+    /* Móvil Pequeño Ajustes */
+    .nav-logo img { height: 65px; }
+    .navbar.scrolled .nav-logo img { height: 55px; }
+    .footer-brand .logo img { height: 75px; }
 }
