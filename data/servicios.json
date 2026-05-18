@@ -188,76 +188,25 @@
     },
     {
       "titulo": {
-        "es": "Uñas y Manicura",
-        "en": "Nails & Manicure",
-        "de": "Nägel & Maniküre"
-      },
-      "servicios": [
-        {
-          "nombre": {
-            "es": "Manicura Tradicional OPI",
-            "en": "OPI Traditional Manicure",
-            "de": "OPI Traditionelle Maniküre"
-          },
-          "descripcion": {
-            "es": "Limpieza, limado, cutículas y esmaltado OPI.",
-            "en": "Cleaning, filing, cuticles, and OPI polishing.",
-            "de": "Reinigung, Feilen, Nagelhaut und OPI-Lackierung."
-          },
-          "precio": "",
-          "duracion": "45 min"
-        },
-        {
-          "nombre": {
-            "es": "Manicura Semipermanente",
-            "en": "Gel Polish Manicure",
-            "de": "Gel-Polish Maniküre"
-          },
-          "descripcion": {
-            "es": "Esmaltado semipermanente que dura hasta 3 semanas.",
-            "en": "Gel polish that lasts up to 3 weeks.",
-            "de": "Gel-Lack, der bis zu 3 Wochen hält."
-          },
-          "precio": "",
-          "duracion": "1 hora"
-        },
-        {
-          "nombre": {
-            "es": "Pedicura Tradicional",
-            "en": "Traditional Pedicure",
-            "de": "Traditionelle Pediküre"
-          },
-          "descripcion": {
-            "es": "Cuidado completo de pies: limpieza, limado y esmaltado.",
-            "en": "Complete foot care: cleaning, filing, and polishing.",
-            "de": "Komplette Fußpflege: Reinigung, Feilen und Lackierung."
-          },
-          "precio": "",
-          "duracion": "1 hora"
-        },
-        {
-          "nombre": {
-            "es": "Pedicura Spa",
-            "en": "Spa Pedicure",
-            "de": "Spa-Pediküre"
-          },
-          "descripcion": {
-            "es": "Baño de pies, exfoliación, mascarilla y masaje relajante.",
-            "en": "Foot bath, exfoliation, mask, and relaxing massage.",
-            "de": "Fußbad, Peeling, Maske und entspannende Massage."
-          },
-          "precio": "",
-          "duracion": "1h 15min"
-        }
-      ]
-    },
-    {
-      "titulo": {
         "es": "Pestañas y Cejas",
         "en": "Lashes & Brows",
         "de": "Wimpern & Augenbrauen"
       },
       "servicios": [
+        {
+          "nombre": {
+            "es": "Extensiones de Pestañas",
+            "en": "Eyelash Extensions",
+            "de": "Wimpernverlängerung"
+          },
+          "descripcion": {
+            "es": "Pestaña a pestaña para un look natural o voluminoso.",
+            "en": "One-by-one for a natural or voluminous look.",
+            "de": "Einzeln angebracht für einen natürlichen oder voluminösen Look."
+          },
+          "precio": "",
+          "duracion": "2 horas"
+        },
         {
           "nombre": {
             "es": "Relleno Extensiones",
@@ -438,8 +387,10 @@
           },
           "precio": "",
           "duracion": "sesión"
-        },
-        {
+        }
+      ]
+    },
+    {
       "titulo": {
         "es": "Uñas y Manicura",
         "en": "Nails & Manicure",
@@ -504,3 +455,5 @@
         }
       ]
     }
+  ]
+}
