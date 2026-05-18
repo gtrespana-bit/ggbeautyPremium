@@ -1,26 +1,35 @@
-document.addEventListener('DOMContentLoaded', async () => {
-  try {
-    const res = await fetch('./data/servicios.json');
-    if (!res.ok) throw new Error('No se pudieron cargar los servicios');
-    const data = await res.json();
-    
+(function() {
+  let servicesData = null;
+
+  // 1. Cargar datos UNA sola vez
+  async function fetchServices() {
+    try {
+      const res = await fetch('./data/servicios.json');
+      if (!res.ok) throw new Error('Error al cargar servicios');
+      servicesData = await res.json();
+      return servicesData;
+    } catch (error) {
+      console.error('Error cargando servicios:', error);
+      return null;
+    }
+  }
+
+  // 2. Función global para renderizar (llamable desde main.js)
+  window.renderServices = function(lang = 'es') {
+    if (!servicesData) return;
     const container = document.getElementById('services-container');
     if (!container) return;
-    
-    container.innerHTML = '';
-    
-    // Obtener idioma activo (es, en, de)
-    const lang = localStorage.getItem('gg_lang') || 'es';
 
-    // Función auxiliar para obtener texto traducido o fallback
+    container.innerHTML = '';
+
     const getTrans = (field, fallback = '') => {
       if (typeof field === 'object' && field !== null) {
-        return field[lang] || field.es || field['en'] || field['de'] || fallback;
+        return field[lang] || field.es || fallback;
       }
       return field || fallback;
     };
 
-    data.categorias.forEach(cat => {
+    servicesData.categorias.forEach(cat => {
       const catTitle = document.createElement('h3');
       catTitle.className = 'category-title';
       catTitle.textContent = getTrans(cat.titulo, 'Categoría');
@@ -37,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const descripcion = getTrans(s.descripcion, '');
         const duracion = s.duracion || '';
         const precio = s.precio ? `${s.precio}€` : 'Consultar';
-        
+
         card.innerHTML = `
           <div class="service-header">
             <h4 class="service-name">${nombre}</h4>
@@ -51,13 +60,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       container.appendChild(grid);
     });
 
-    // Re-inicializar animaciones de scroll para contenido dinámico
+    // Re-activar animaciones de scroll para los nuevos elementos
     if (window.revealObserver) {
       setTimeout(() => {
-        document.querySelectorAll('.service-card').forEach(el => window.revealObserver.observe(el));
-      }, 100);
+        document.querySelectorAll('.service-card, .category-title').forEach(el => {
+          el.classList.add('active');
+          window.revealObserver.observe(el);
+        });
+      }, 50);
     }
-  } catch (error) {
-    console.error('Error cargando servicios:', error);
-  }
-});
+  };
+
+  // 3. Ejecutar al cargar la página
+  document.addEventListener('DOMContentLoaded', async () => {
+    await fetchServices();
+    const lang = localStorage.getItem('gg_lang') || 'es';
+    window.renderServices(lang);
+  });
+})();
