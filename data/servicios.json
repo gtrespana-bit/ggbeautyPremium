@@ -1,205 +1,457 @@
 {
   "categorias": [
     {
-      "titulo": "Tratamientos Faciales",
+      "titulo": {
+        "es": "Tratamientos Faciales",
+        "en": "Facial Treatments",
+        "de": "Gesichtsbehandlungen"
+      },
       "servicios": [
         {
-          "nombre": "Peeling Láser con Carbón Activo",
+          "nombre": {
+            "es": "Peeling Láser con Carbón Activo",
+            "en": "Active Carbon Laser Peel",
+            "de": "Aktivkohle-Laserpeeling"
+          },
+          "descripcion": {
+            "es": "Rejuvenecimiento facial profundo que elimina impurezas, reduce poros y aporta luminosidad inmediata.",
+            "en": "Deep facial rejuvenation that removes impurities, reduces pores, and provides immediate radiance.",
+            "de": "Tiefe Gesichtserneuerung, die Unreinheiten beseitigt, Poren verkleinert und sofortige Ausstrahlung verleiht."
+          },
           "precio": "",
-          "duracion": "45 min",
-          "descripcion": "Rejuvenecimiento facial profundo que elimina impurezas, reduce poros y aporta luminosidad inmediata. Tecnología láser de última generación."
+          "duracion": "45 min"
         },
         {
-          "nombre": "Radiofrecuencia Facial",
+          "nombre": {
+            "es": "Radiofrecuencia Facial",
+            "en": "Facial Radiofrequency",
+            "de": "Gesichtsradiowellen"
+          },
+          "descripcion": {
+            "es": "Estimulación de colágeno para mejorar la firmeza, reducir arrugas y rejuvenecer la piel.",
+            "en": "Collagen stimulation to improve firmness, reduce wrinkles, and rejuvenate the skin.",
+            "de": "Kollagenstimulation zur Verbesserung der Festigkeit, Reduzierung von Falten und Verjüngung der Haut."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Estimulación de colágeno para mejorar la firmeza, reducir arrugas y rejuvenecer la piel. Resultados visibles desde la primera sesión."
+          "duracion": "sesión"
         },
         {
-          "nombre": "Microdermoabrasión",
+          "nombre": {
+            "es": "Microdermoabrasión",
+            "en": "Microdermabrasion",
+            "de": "Mikrodermabrasion"
+          },
+          "descripcion": {
+            "es": "Exfoliación mecánica que renueva la piel, mejora textura y unifica el tono.",
+            "en": "Mechanical exfoliation that renews the skin, improves texture, and evens tone.",
+            "de": "Mechanisches Peeling, das die Haut erneuert, die Textur verbessert und den Hautton ausgleicht."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Exfoliación mecánica que renueva la piel, mejora textura y unifica el tono. Ideal para pieles con manchas o cicatrices."
+          "duracion": "sesión"
         },
         {
-          "nombre": "Microneedling / Dermapen",
+          "nombre": {
+            "es": "Microneedling / Dermapen",
+            "en": "Microneedling / Dermapen",
+            "de": "Microneedling / Dermapen"
+          },
+          "descripcion": {
+            "es": "Micropunción que estimula la regeneración celular. Mejora cicatrices y arrugas.",
+            "en": "Micro-puncture that stimulates cell regeneration. Improves scars and wrinkles.",
+            "de": "Mikropunktur, die die Zellregeneration stimuliert. Verbessert Narben und Falten."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Micropunción que estimula la regeneración celular. Mejora cicatrices, arrugas y textura de la piel."
+          "duracion": "sesión"
         },
         {
-          "nombre": "Tratamiento Contorno de Ojos",
+          "nombre": {
+            "es": "Tratamiento Contorno de Ojos",
+            "en": "Eye Contour Treatment",
+            "de": "Augenkonturbehandlung"
+          },
+          "descripcion": {
+            "es": "Tratamiento específico para reducir bolsas, ojeras y patas de gallo.",
+            "en": "Specific treatment to reduce bags, dark circles, and crow's feet.",
+            "de": "Spezielle Behandlung zur Reduzierung von Tränensäcken, Augenringen und Krähenfüßen."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Tratamiento específico para reducir bolsas, ojeras y patas de gallo. Hidratación profunda y efecto lifting."
+          "duracion": "sesión"
         },
         {
-          "nombre": "Dermaplaning",
+          "nombre": {
+            "es": "Dermaplaning",
+            "en": "Dermaplaning",
+            "de": "Dermaplaning"
+          },
+          "descripcion": {
+            "es": "Exfoliación física que elimina células muertas y vello facial.",
+            "en": "Physical exfoliation that removes dead cells and facial hair.",
+            "de": "Physikalisches Peeling, das abgestorbene Zellen und Gesichtsbehaarung entfernt."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Exfoliación física que elimina células muertas y vello facial. Piel suave, luminosa y preparada para makeup."
+          "duracion": "sesión"
         }
       ]
     },
     {
-      "titulo": "Depilación",
+      "titulo": {
+        "es": "Depilación",
+        "en": "Hair Removal",
+        "de": "Haarentfernung"
+      },
       "servicios": [
         {
-          "nombre": "Depilación Láser Diodo Zona Mini",
+          "nombre": {
+            "es": "Depilación Láser Diodo Zona Mini",
+            "en": "Diode Laser Hair Removal - Small",
+            "de": "Diodenlaser-Haarentfernung - Klein"
+          },
+          "descripcion": {
+            "es": "Labio, mentón, entrecejo o dedos. Resultados duraderos.",
+            "en": "Lip, chin, glabella, or toes. Long-lasting results.",
+            "de": "Lippe, Kinn, Glabella oder Zehen. Langanhaltende Ergebnisse."
+          },
           "precio": "",
-          "duracion": "15 min",
-          "descripcion": "Labio, mentón, entrecejo o dedos. Tecnología láser diodo para resultados duraderos y piel suave."
+          "duracion": "15 min"
         },
         {
-          "nombre": "Depilación Láser Diodo Zona Mediana",
+          "nombre": {
+            "es": "Depilación Láser Diodo Zona Mediana",
+            "en": "Diode Laser Hair Removal - Medium",
+            "de": "Diodenlaser-Haarentfernung - Mittel"
+          },
+          "descripcion": {
+            "es": "Axilas, bikini clásico o media espalda. Máxima eficacia.",
+            "en": "Underarms, classic bikini, or half back. Maximum efficacy.",
+            "de": "Achseln, klassischer Bikini oder halber Rücken. Maximale Wirksamkeit."
+          },
           "precio": "",
-          "duracion": "30 min",
-          "descripcion": "Axilas, bikini clásico, media espalda o pecho. Máxima eficacia con mínima molestia."
+          "duracion": "30 min"
         },
         {
-          "nombre": "Depilación Láser Diodo Zona Grande",
+          "nombre": {
+            "es": "Depilación Láser Diodo Zona Grande",
+            "en": "Diode Laser Hair Removal - Large",
+            "de": "Diodenlaser-Haarentfernung - Groß"
+          },
+          "descripcion": {
+            "es": "Piernas completas, espalda completa o cuerpo entero.",
+            "en": "Full legs, full back, or full body.",
+            "de": "Ganze Beine, ganzer Rücken oder ganzer Körper."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Piernas completas, espalda completa o cuerpo entero. Packs disponibles con descuento."
+          "duracion": "sesión"
         },
         {
-          "nombre": "Depilación con Cera Facial",
+          "nombre": {
+            "es": "Depilación con Cera Facial",
+            "en": "Facial Waxing",
+            "de": "Gesichtswaxing"
+          },
+          "descripcion": {
+            "es": "Depilación tradicional con cera de alta calidad.",
+            "en": "Traditional hair removal with high-quality wax.",
+            "de": "Traditionelle Haarentfernung mit hochwertigem Wachs."
+          },
           "precio": "",
-          "duracion": "15 min",
-          "descripcion": "Depilación tradicional con cera de alta calidad para cejas, labio, mentón o cara completa."
+          "duracion": "15 min"
         },
         {
-          "nombre": "Depilación con Cera Corporal",
+          "nombre": {
+            "es": "Depilación con Cera Corporal",
+            "en": "Body Waxing",
+            "de": "Körperwaxing"
+          },
+          "descripcion": {
+            "es": "Axilas, bikini, piernas o brazos. Cera tibia o caliente.",
+            "en": "Underarms, bikini, legs, or arms. Warm or hot wax.",
+            "de": "Achseln, Bikini, Beine oder Arme. Warmes oder heißes Wachs."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Axilas, bikini, piernas, brazos o cuerpo completo. Cera tibia o caliente según zona."
+          "duracion": "sesión"
         },
         {
-          "nombre": "Depilación de Cejas con Hilo",
+          "nombre": {
+            "es": "Depilación de Cejas con Hilo",
+            "en": "Eyebrow Threading",
+            "de": "Augenbrauen-Zwirnen"
+          },
+          "descripcion": {
+            "es": "Técnica tradicional oriental para un diseño preciso.",
+            "en": "Traditional oriental technique for a precise design.",
+            "de": "Traditionelle orientalische Technik für ein präzises Design."
+          },
           "precio": "",
-          "duracion": "15 min",
-          "descripcion": "Técnica tradicional oriental para un diseño preciso y duradero. Sin irritación."
+          "duracion": "15 min"
         }
       ]
     },
     {
-      "titulo": "Uñas y Manicura",
+      "titulo": {
+        "es": "Uñas y Manicura",
+        "en": "Nails & Manicure",
+        "de": "Nägel & Maniküre"
+      },
       "servicios": [
         {
-          "nombre": "Manicura Tradicional OPI",
+          "nombre": {
+            "es": "Manicura Tradicional OPI",
+            "en": "OPI Traditional Manicure",
+            "de": "OPI Traditionelle Maniküre"
+          },
+          "descripcion": {
+            "es": "Limpieza, limado, cutículas y esmaltado OPI.",
+            "en": "Cleaning, filing, cuticles, and OPI polishing.",
+            "de": "Reinigung, Feilen, Nagelhaut und OPI-Lackierung."
+          },
           "precio": "",
-          "duracion": "45 min",
-          "descripcion": "Limpieza, limado, cutículas y esmaltado con productos OPI de máxima calidad. Duración y brillo garantizados."
+          "duracion": "45 min"
         },
         {
-          "nombre": "Manicura Semipermanente",
+          "nombre": {
+            "es": "Manicura Semipermanente",
+            "en": "Gel Polish Manicure",
+            "de": "Gel-Polish Maniküre"
+          },
+          "descripcion": {
+            "es": "Esmaltado semipermanente que dura hasta 3 semanas.",
+            "en": "Gel polish that lasts up to 3 weeks.",
+            "de": "Gel-Lack, der bis zu 3 Wochen hält."
+          },
           "precio": "",
-          "duracion": "1 hora",
-          "descripcion": "Esmaltado semipermanente que dura hasta 3 semanas. Amplia gama de colores OPI disponibles."
+          "duracion": "1 hora"
         },
         {
-          "nombre": "Pedicura Tradicional",
+          "nombre": {
+            "es": "Pedicura Tradicional",
+            "en": "Traditional Pedicure",
+            "de": "Traditionelle Pediküre"
+          },
+          "descripcion": {
+            "es": "Cuidado completo de pies: limpieza, limado y esmaltado.",
+            "en": "Complete foot care: cleaning, filing, and polishing.",
+            "de": "Komplette Fußpflege: Reinigung, Feilen und Lackierung."
+          },
           "precio": "",
-          "duracion": "1 hora",
-          "descripcion": "Cuidado completo de pies: limpieza, limado, cutículas, exfoliación y esmaltado."
+          "duracion": "1 hora"
         },
         {
-          "nombre": "Pedicura Spa",
+          "nombre": {
+            "es": "Pedicura Spa",
+            "en": "Spa Pedicure",
+            "de": "Spa-Pediküre"
+          },
+          "descripcion": {
+            "es": "Baño de pies, exfoliación, mascarilla y masaje relajante.",
+            "en": "Foot bath, exfoliation, mask, and relaxing massage.",
+            "de": "Fußbad, Peeling, Maske und entspannende Massage."
+          },
           "precio": "",
-          "duracion": "1h 15min",
-          "descripcion": "Tratamiento relajante con baño de pies, exfoliación, mascarilla, masaje y esmaltado."
+          "duracion": "1h 15min"
         }
       ]
     },
     {
-      "titulo": "Pestañas y Cejas",
+      "titulo": {
+        "es": "Pestañas y Cejas",
+        "en": "Lashes & Brows",
+        "de": "Wimpern & Augenbrauen"
+      },
       "servicios": [
         {
-          "nombre": "Extensiones de Pestañas",
+          "nombre": {
+            "es": "Extensiones de Pestañas",
+            "en": "Eyelash Extensions",
+            "de": "Wimpernverlängerung"
+          },
+          "descripcion": {
+            "es": "Pestaña a pestaña para un look natural o voluminoso.",
+            "en": "One-by-one for a natural or voluminous look.",
+            "de": "Einzeln angebracht für einen natürlichen oder voluminösen Look."
+          },
           "precio": "",
-          "duracion": "2 horas",
-          "descripcion": "Pestaña a pestaña para un look natural o voluminoso. Incluye diseño personalizado según tu ojo."
+          "duracion": "2 horas"
         },
         {
-          "nombre": "Relleno Extensiones",
+          "nombre": {
+            "es": "Relleno Extensiones",
+            "en": "Lash Fill",
+            "de": "Wimpernauffüllung"
+          },
+          "descripcion": {
+            "es": "Mantenimiento cada 2-3 semanas.",
+            "en": "Maintenance every 2-3 weeks.",
+            "de": "Pflege alle 2-3 Wochen."
+          },
           "precio": "",
-          "duracion": "1h 15min",
-          "descripcion": "Mantenimiento cada 2-3 semanas para mantener tus extensiones perfectas."
+          "duracion": "1h 15min"
         },
         {
-          "nombre": "Lifting de Pestañas",
+          "nombre": {
+            "es": "Lifting de Pestañas",
+            "en": "Lash Lifting",
+            "de": "Wimpernlifting"
+          },
+          "descripcion": {
+            "es": "Elevación y curvado con tinte incluido.",
+            "en": "Lifting and curling with tint included.",
+            "de": "Anheben und Locken inklusive Färbung."
+          },
           "precio": "",
-          "duracion": "1 hora",
-          "descripcion": "Elevación y curvado de pestañas naturales con tinte incluido. Efecto duradero 6-8 semanas."
+          "duracion": "1 hora"
         },
         {
-          "nombre": "Microblading",
+          "nombre": {
+            "es": "Microblading",
+            "en": "Microblading",
+            "de": "Microblading"
+          },
+          "descripcion": {
+            "es": "Diseño de cejas pelo a pelo semi-permanente.",
+            "en": "Semi-permanent eyebrow hair-by-hair design.",
+            "de": "Halbpermanentes Augenbrauen-Design Haar für Haar."
+          },
           "precio": "",
-          "duracion": "2h 30min",
-          "descripcion": "Diseño de cejas pelo a pelo con técnica semi-permanente. Resultados naturales y duraderos."
+          "duracion": "2h 30min"
         },
         {
-          "nombre": "Laminación de Cejas",
+          "nombre": {
+            "es": "Laminación de Cejas",
+            "en": "Brow Lamination",
+            "de": "Augenbrauen-Laminierung"
+          },
+          "descripcion": {
+            "es": "Alisado y fijación para un look arreglado.",
+            "en": "Smoothing and setting for a groomed look.",
+            "de": "Glätten und Fixieren für ein gepflegtes Aussehen."
+          },
           "precio": "",
-          "duracion": "45 min",
-          "descripcion": "Alisado y fijación de cejas para un look arreglado y definido. Efecto 4-6 semanas."
+          "duracion": "45 min"
         }
       ]
     },
     {
-      "titulo": "Masajes",
+      "titulo": {
+        "es": "Masajes",
+        "en": "Massages",
+        "de": "Massagen"
+      },
       "servicios": [
         {
-          "nombre": "Masaje Relajante",
+          "nombre": {
+            "es": "Masaje Relajante",
+            "en": "Relaxing Massage",
+            "de": "Entspannungsmassage"
+          },
+          "descripcion": {
+            "es": "Masaje suave que elimina tensiones y estrés.",
+            "en": "Gentle massage that eliminates tension and stress.",
+            "de": "Sanfte Massage, die Verspannungen und Stress löst."
+          },
           "precio": "",
-          "duracion": "1h 30min",
-          "descripcion": "Masaje suave y envolvente que elimina tensiones y estrés. Ideal para relajación profunda y bienestar."
+          "duracion": "1h 30min"
         },
         {
-          "nombre": "Masaje Terapéutico",
+          "nombre": {
+            "es": "Masaje Terapéutico",
+            "en": "Therapeutic Massage",
+            "de": "Therapeutische Massage"
+          },
+          "descripcion": {
+            "es": "Técnica profunda para liberar contracturas.",
+            "en": "Deep technique to release muscle knots.",
+            "de": "Tiefe Technik zur Lösung von Verspannungen."
+          },
           "precio": "",
-          "duracion": "1 hora",
-          "descripcion": "Técnica profunda para liberar contracturas musculares y aliviar dolores específicos."
+          "duracion": "1 hora"
         }
       ]
     },
     {
-      "titulo": "Tratamientos Corporales",
+      "titulo": {
+        "es": "Tratamientos Corporales",
+        "en": "Body Treatments",
+        "de": "Körperbehandlungen"
+      },
       "servicios": [
         {
-          "nombre": "Radiofrecuencia Corporal",
+          "nombre": {
+            "es": "Radiofrecuencia Corporal",
+            "en": "Body Radiofrequency",
+            "de": "Körperradiowellen"
+          },
+          "descripcion": {
+            "es": "Reafirmación y remodelación corporal estimulando colágeno.",
+            "en": "Firming and body contouring by stimulating collagen.",
+            "de": "Straffung und Körperkonturierung durch Kollagenstimulation."
+          },
           "precio": "",
-          "duracion": "1 hora",
-          "descripcion": "Reafirmación y remodelación corporal. Estimula colágeno para piel más firme y tersa."
+          "duracion": "1 hora"
         },
         {
-          "nombre": "Presoterapia",
+          "nombre": {
+            "es": "Presoterapia",
+            "en": "Pressotherapy",
+            "de": "Pressotherapie"
+          },
+          "descripcion": {
+            "es": "Drenaje linfático mediante compresión secuencial.",
+            "en": "Lymphatic drainage through sequential compression.",
+            "de": "Lymphdrainage durch sequentielle Kompression."
+          },
           "precio": "",
-          "duracion": "45 min",
-          "descripcion": "Drenaje linfático mediante compresión secuencial. Elimina retención de líquidos y celulitis."
+          "duracion": "45 min"
         },
         {
-          "nombre": "Tratamientos Reductores",
+          "nombre": {
+            "es": "Tratamientos Reductores",
+            "en": "Reducing Treatments",
+            "de": "Abnehmbehandlungen"
+          },
+          "descripcion": {
+            "es": "Combinación de técnicas para reducir medidas.",
+            "en": "Combination of techniques to reduce measurements.",
+            "de": "Kombination von Techniken zur Reduzierung von Maßen."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Combinación de técnicas para reducir medidas y mejorar la textura de la piel."
+          "duracion": "sesión"
         }
       ]
     },
     {
-      "titulo": "Medicina Estética",
+      "titulo": {
+        "es": "Medicina Estética",
+        "en": "Aesthetic Medicine",
+        "de": "Ästhetische Medizin"
+      },
       "servicios": [
         {
-          "nombre": "Eliminación de Tatuajes",
+          "nombre": {
+            "es": "Eliminación de Tatuajes",
+            "en": "Tattoo Removal",
+            "de": "Tattooentfernung"
+          },
+          "descripcion": {
+            "es": "Tecnología láser para eliminación progresiva.",
+            "en": "Laser technology for progressive removal.",
+            "de": "Lasertechnologie zur progressiven Entfernung."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Tecnología láser para eliminación progresiva de tatuajes. Valoración personalizada gratuita."
+          "duracion": "sesión"
         },
         {
-          "nombre": "Tratamiento Láser Rejuvenecimiento",
+          "nombre": {
+            "es": "Tratamiento Láser Rejuvenecimiento",
+            "en": "Rejuvenation Laser Treatment",
+            "de": "Verjüngungs-Laserbehandlung"
+          },
+          "descripcion": {
+            "es": "Láser facial para mejorar textura, manchas y signos de envejecimiento.",
+            "en": "Facial laser to improve texture, spots, and aging signs.",
+            "de": "Gesichtslaser zur Verbesserung von Textur, Flecken und Alterszeichen."
+          },
           "precio": "",
-          "duracion": "sesión",
-          "descripcion": "Láser facial para mejorar textura, manchas y signos de envejecimiento. Piel renovada."
+          "duracion": "sesión"
         }
       ]
     }
