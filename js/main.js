@@ -1,5 +1,60 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // ========== LOADER ==========
+    // ==========================================
+    // 1. SISTEMA DE TRADUCCIONES (I18N)
+    // ==========================================
+    let translations = {};
+    let currentLang = localStorage.getItem('gg_lang') || 'es';
+
+    // Carga el archivo JSON con las traducciones
+    async function loadTranslations() {
+        try {
+            const res = await fetch('data/translations.json');
+            if (!res.ok) throw new Error('No se pudo cargar el archivo de traducciones');
+            translations = await res.json();
+            applyLanguage(currentLang); // Aplica el idioma guardado o por defecto
+        } catch (e) {
+            console.warn('Error al cargar traducciones:', e);
+        }
+    }
+
+    // Función para aplicar el idioma al DOM
+    window.applyLanguage = function(lang) {
+        currentLang = lang;
+        localStorage.setItem('gg_lang', lang);
+        
+        // Actualiza textos
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[key] && translations[key][lang]) {
+                el.innerHTML = translations[key][lang]; // innerHTML permite usar <br>
+            }
+        });
+
+        // Actualiza el selector desplegable
+        const selector = document.getElementById('languageSelect');
+        if (selector) selector.value = lang;
+
+        // Actualiza atributo lang del HTML
+        document.documentElement.lang = lang;
+    }
+
+    // Función global llamada por el HTML (onchange)
+    window.changeLanguage = function(lang) {
+        if (translations && Object.keys(translations).length > 0) {
+            window.applyLanguage(lang);
+        } else {
+            console.warn('Las traducciones aún no se han cargado.');
+        }
+    };
+
+    // Inicia la carga de traducciones
+    loadTranslations();
+
+    // ==========================================
+    // 2. UI & ANIMACIONES
+    // ==========================================
+
+    // LOADER
     const loader = document.getElementById('loader');
     const loaderPercent = document.getElementById('loaderPercent');
     if (loader && loaderPercent) {
@@ -15,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 80);
     }
 
-    // ========== CUSTOM CURSOR ==========
+    // CUSTOM CURSOR
     const cursor = document.getElementById('cursor');
     const cursorDot = document.getElementById('cursorDot');
     if (cursor && cursorDot && window.matchMedia('(pointer: fine)').matches) {
@@ -33,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ========== PARTICLES ==========
+    // PARTICLES
     const particlesContainer = document.getElementById('particles');
     if (particlesContainer) {
         for (let i = 0; i < 35; i++) {
@@ -48,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ========== NAVBAR & SCROLL ==========
+    // NAVBAR & SCROLL
     const navbar = document.getElementById('navbar');
     const backToTop = document.getElementById('backToTop');
     const progressBar = document.getElementById('progressBar');
@@ -60,13 +115,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (progressBar) progressBar.style.width = (scrollY / docH * 100) + '%';
     });
 
-    // ========== SCROLL REVEAL ==========
+    // SCROLL REVEAL
     window.revealObserver = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
     }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => window.revealObserver.observe(el));
 
-    // ========== COUNTERS ==========
+    // COUNTERS
     let countersDone = false;
     const counterObserver = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting && !countersDone) {
@@ -86,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.5 });
     document.querySelectorAll('[data-count]').forEach(c => counterObserver.observe(c));
 
-    // ========== TESTIMONIALS ==========
+    // TESTIMONIALS
     const tItems = document.querySelectorAll('.testimonial-item');
     const tDots = document.querySelectorAll('.testimonial-dot');
     let tCurrent = 0;
@@ -100,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tDots.forEach(d => d.addEventListener('click', () => showT(+d.dataset.index)));
     if (tItems.length > 0) setInterval(() => showT((tCurrent + 1) % tItems.length), 6000);
 
-    // ========== MOBILE MENU & HAMBURGER ==========
+    // MOBILE MENU (HAMBURGER)
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileClose = document.getElementById('mobileClose');
@@ -108,13 +163,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger && mobileMenu && mobileClose) {
         hamburger.addEventListener('click', () => {
             mobileMenu.classList.add('open');
-            document.body.style.overflow = 'hidden'; // Prevent background scroll
+            document.body.style.overflow = 'hidden'; // Bloquea scroll del fondo
         });
         mobileClose.addEventListener('click', () => {
             mobileMenu.classList.remove('open');
             document.body.style.overflow = '';
         });
-        // Close on link click
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
@@ -123,7 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Global close function for inline onclick
     window.closeMobile = function() {
         if (mobileMenu) {
             mobileMenu.classList.remove('open');
@@ -131,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // ========== MAGNETIC EFFECT ==========
+    // MAGNETIC EFFECT
     document.querySelectorAll('.magnetic').forEach(el => {
         el.addEventListener('mousemove', e => {
             const r = el.getBoundingClientRect();
@@ -142,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
         el.addEventListener('mouseleave', () => el.style.transform = '');
     });
 
-    // ========== PARALLAX ORBS ==========
+    // PARALLAX ORBS
     document.addEventListener('mousemove', e => {
         const orbs = document.querySelectorAll('.hero-gradient-orb');
         const x = (e.clientX / window.innerWidth - 0.5) * 2;
@@ -152,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ========== SMOOTH SCROLL ==========
+    // SMOOTH SCROLL
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             e.preventDefault();
@@ -161,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ========== FORM HANDLER ==========
+    // FORM HANDLER
     window.handleSubmit = function(e) {
         e.preventDefault();
         const btn = e.target.querySelector('.form-submit');
@@ -177,7 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // ========== TILT SERVICE CARDS ==========
+    // TILT SERVICE CARDS
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('mousemove', e => {
             const r = card.getBoundingClientRect();
@@ -188,14 +241,14 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener('mouseleave', () => card.style.transform = '');
     });
 
-    // ========== PAGE TITLE BLUR ==========
+    // PAGE TITLE ON BLUR
     document.addEventListener('visibilitychange', () => {
         document.title = document.hidden 
             ? '✨ GG Beauty te espera — Lanzarote' 
             : 'GG Beauty Aesthetics — Genoveva Ganeva | Tías, Lanzarote';
     });
 
-    // ========== VIDEO FALLBACK ==========
+    // VIDEO FALLBACK
     const heroVideo = document.querySelector('.hero-video');
     if (heroVideo) {
         heroVideo.addEventListener('error', () => console.log('Video fallback activated'));
