@@ -427,20 +427,6 @@
         },
         {
           "nombre": {
-            "es": "Pedicura Tradicional",
-            "en": "Traditional Pedicure",
-            "de": "Traditionelle Pediküre"
-          },
-          "descripcion": {
-            "es": "Cuidado completo de pies: limpieza, limado y esmaltado.",
-            "en": "Complete foot care: cleaning, filing, and polishing.",
-            "de": "Komplette Fußpflege: Reinigung, Feilen und Lackierung."
-          },
-          "precio": "",
-          "duracion": "1 hora"
-        },
-        {
-          "nombre": {
             "es": "Pedicura Spa",
             "en": "Spa Pedicure",
             "de": "Spa-Pediküre"
