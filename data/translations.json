@@ -68,6 +68,8 @@
   "cta.btn": { "es": "Reservar Cita Ahora", "en": "Book Appointment Now", "de": "Jetzt Termin buchen" },
   "contact.label": { "es": "Contacto", "en": "Contact", "de": "Kontakt" },
   "contact.title": { "es": "Visítanos en Tías", "en": "Visit Us in Tías", "de": "Besuchen Sie uns in Tías" },
+  "contact.phone_whatsapp": { "es": "Teléfono & WhatsApp", "en": "Phone & WhatsApp", "de": "Telefon & WhatsApp" },  
+  "whatsapp.button": { "es": "Escribir por WhatsApp", "en": "Chat on WhatsApp", "de": "Über WhatsApp schreiben" },  
   "contact.intro": { "es": "Tu centro de belleza y estética en Lanzarote. Ambiente acogedor, profesionalidad y los mejores productos para ti.", "en": "Your beauty and aesthetics center in Lanzarote. Welcoming environment, professionalism, and the best products for you.", "de": "Ihr Schönheits- und Ästhetikzentrum in Lanzarote. Einladende Atmosphäre, Professionalität und die besten Produkte für Sie." },
   "contact.address_label": { "es": "Dirección", "en": "Address", "de": "Adresse" },
   "contact.address": { "es": "C. Anzuelo, 11, 8b35510 Tías, Las Palmas", "en": "C. Anzuelo, 11, 8b35510 Tías, Las Palmas", "de": "C. Anzuelo, 11, 8b35510 Tías, Las Palmas" },
@@ -89,6 +91,5 @@
   "footer.privacy": { "es": "Privacidad", "en": "Privacy", "de": "Datenschutz" },
   "footer.terms": { "es": "Términos", "en": "Terms", "de": "AGB" },
   "footer.cookies": { "es": "Cookies", "en": "Cookies", "de": "Cookies" }
-  "contact.phone_whatsapp": { "es": "Teléfono & WhatsApp", "en": "Phone & WhatsApp", "de": "Telefon & WhatsApp" },
-  "whatsapp.button": { "es": "Escribir por WhatsApp", "en": "Chat on WhatsApp", "de": "Über WhatsApp schreiben" },
+
 }
