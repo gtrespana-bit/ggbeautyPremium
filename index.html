@@ -4,8 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GG Beauty Aesthetics — Genoveva Ganeva | Tías, Lanzarote</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="GG Beauty Aesthetics en Tías, Lanzarote. Centro de estética avanzada liderado por Genoveva Ganeva. Tratamientos faciales, depilación láser, radiofrecuencia y microblading.">
+    <meta name="keywords" content="estética Lanzarote, centro de belleza Tías, depilación láser Lanzarote, tratamientos faciales, Genoveva Ganeva, microblading, radiofrecuencia corporal">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="GG Beauty Aesthetics">
+    
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tudominio.com/">
+    <meta property="og:title" content="GG Beauty Aesthetics — Genoveva Ganeva | Tías, Lanzarote">
+    <meta property="og:description" content="Tu centro de confianza en Lanzarote para tratamientos de belleza y estética avanzada. Reserva tu cita hoy.">
+    <meta property="og:image" content="https://www.tudominio.com/assets/images/Logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/Logo.png">
+    
+    <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Schema.org JSON-LD (SEO Local) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "GG Beauty Aesthetics",
+      "image": "https://www.tudominio.com/assets/images/Logo.png",
+      "@id": "https://www.tudominio.com",
+      "url": "https://www.tudominio.com",
+      "telephone": "+34644330466",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "C. Anzuelo, 11, 8b35510",
+        "addressLocality": "Tías",
+        "addressRegion": "Las Palmas",
+        "postalCode": "35510",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.9326,
+        "longitude": -13.6632
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "11:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/gg_beauty_aesthetics/"
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="progress-bar" id="progressBar"></div>
@@ -44,8 +98,8 @@
         <div class="language-selector">
             <select id="languageSelect" onchange="changeLanguage(this.value)">
                 <option value="es">🇪🇸 ES</option>
-                <option value="en">🇬🇧 EN</option>
-                <option value="de">🇩 DE</option>
+                <option value="en">🇬 EN</option>
+                <option value="de">🇩🇪 DE</option>
             </select>
         </div>
 
@@ -127,7 +181,7 @@
     <section class="about" id="nosotros">
         <div class="about-grid">
             <div class="about-image-wrapper reveal-left">
-                <img src="./assets/images/about-us.jpg" alt="Centro GG Beauty" class="about-image">
+                <img src="./assets/images/about-us.jpg" alt="Centro GG Beauty" class="about-image" loading="lazy">
                 <div class="about-image-frame"></div>
                 <div class="about-floating-card">
                     <div class="number" data-count="5">0</div>
@@ -180,34 +234,34 @@
     </section>
 
     <!-- Gallery Section -->
-<section class="gallery" id="galeria">
-    <div class="section-header reveal">
-        <div class="section-label"><span data-i18n="gallery.label">Nuestro Espacio</span></div>
-        <h2 class="section-title"><span data-i18n="gallery.title">Conoce GG Beauty</span></h2>
-    </div>
-    <div class="gallery-grid">
-        <div class="gallery-item reveal-scale stagger-1">
-            <img src="./assets/images/gallery-treatment-room.jpg" alt="Sala de Tratamientos">
-            <div class="gallery-overlay"><div><h4 data-i18n="gallery.g1">Sala de Tratamientos</h4><p data-i18n="gallery.g1d">Espacio diseñado para tu bienestar</p></div></div>
+    <section class="gallery" id="galeria">
+        <div class="section-header reveal">
+            <div class="section-label"><span data-i18n="gallery.label">Nuestro Espacio</span></div>
+            <h2 class="section-title"><span data-i18n="gallery.title">Conoce GG Beauty</span></h2>
         </div>
-        <div class="gallery-item reveal-scale stagger-2">
-            <img src="./assets/images/gallery-facial.jpg" alt="Tecnología Avanzada">
-            <div class="gallery-overlay"><div><h4 data-i18n="gallery.g2">Tecnología Avanzada</h4><p data-i18n="gallery.g2d">Limpieza y Rejuvenecimiento de la Piel</p></div></div>
+        <div class="gallery-grid">
+            <div class="gallery-item reveal-scale stagger-1">
+                <img src="./assets/images/gallery-treatment-room.jpg" alt="Sala de Tratamientos" loading="lazy">
+                <div class="gallery-overlay"><div><h4 data-i18n="gallery.g1">Sala de Tratamientos</h4><p data-i18n="gallery.g1d">Espacio diseñado para tu bienestar</p></div></div>
+            </div>
+            <div class="gallery-item reveal-scale stagger-2">
+                <img src="./assets/images/gallery-facial.jpg" alt="Tecnología Avanzada" loading="lazy">
+                <div class="gallery-overlay"><div><h4 data-i18n="gallery.g2">Tecnología Avanzada</h4><p data-i18n="gallery.g2d">Limpieza y Rejuvenecimiento de la Piel</p></div></div>
+            </div>
+            <div class="gallery-item reveal-scale stagger-3">
+                <img src="./assets/images/gallery-manicure.jpg" alt="Manicura OPI" loading="lazy">
+                <div class="gallery-overlay"><div><h4 data-i18n="gallery.g3">Manicura OPI</h4><p data-i18n="gallery.g3d">Productos premium</p></div></div>
+            </div>
+            <div class="gallery-item reveal-scale stagger-4">
+                <img src="./assets/images/gallery-massage.jpg" alt="Masajes" loading="lazy">
+                <div class="gallery-overlay"><div><h4 data-i18n="gallery.g4">Masajes</h4><p data-i18n="gallery.g4d">Relajación y bienestar</p></div></div>
+            </div>
+            <div class="gallery-item reveal-scale stagger-5">
+                <img src="./assets/images/gallery-radiofrequency.jpg" alt="Radiofrecuencia" loading="lazy">
+                <div class="gallery-overlay"><div><h4 data-i18n="gallery.g5">Radiofrecuencia</h4><p data-i18n="gallery.g5d">Reafirmación y rejuvenecimiento</p></div></div>
+            </div>
         </div>
-        <div class="gallery-item reveal-scale stagger-3">
-            <img src="./assets/images/gallery-manicure.jpg" alt="Manicura OPI">
-            <div class="gallery-overlay"><div><h4 data-i18n="gallery.g3">Manicura OPI</h4><p data-i18n="gallery.g3d">Productos premium</p></div></div>
-        </div>
-        <div class="gallery-item reveal-scale stagger-4">
-            <img src="./assets/images/gallery-massage.jpg" alt="Masajes">
-            <div class="gallery-overlay"><div><h4 data-i18n="gallery.g4">Masajes</h4><p data-i18n="gallery.g4d">Relajación y bienestar</p></div></div>
-        </div>
-        <div class="gallery-item reveal-scale stagger-5">
-            <img src="./assets/images/gallery-radiofrequency.jpg" alt="Radiofrecuencia">
-            <div class="gallery-overlay"><div><h4 data-i18n="gallery.g5">Radiofrecuencia</h4><p data-i18n="gallery.g5d">Reafirmación y rejuvenecimiento</p></div></div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <div class="section-divider"></div>
 
@@ -234,7 +288,7 @@
         <div class="team-grid" style="max-width: 500px; margin: 0 auto;">
             <div class="team-card reveal stagger-1">
                 <div class="team-image">
-                    <img src="./assets/images/team-genoveva.jpg" alt="Genoveva Ganeva">
+                    <img src="./assets/images/team-genoveva.jpg" alt="Genoveva Ganeva" loading="lazy">
                 </div>
                 <h3 class="team-name">Genoveva Ganeva</h3>
                 <p class="team-role" data-i18n="team.role1">Fundadora & Directora</p>
@@ -322,7 +376,7 @@
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo"><img src="./assets/images/Logo.png" alt="GG Beauty"></div>
+                <div class="logo"><img src="./assets/images/Logo.png" alt="GG Beauty" loading="lazy"></div>
                 <p data-i18n="footer.brand">Genoveva Ganeva Beauty and Aesthetic Clinic. Tu centro de confianza en Lanzarote para tratamientos de belleza y estética avanzada.</p>
                 
                 <div class="footer-social">
