@@ -93,17 +93,24 @@
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <a href="#inicio" class="nav-logo magnetic">
-            <img src="./assets/images/Logo.png" alt="GG Beauty Aesthetics - Genoveva Ganeva" decoding="async">
+            <img 
+                src="./assets/images/Logo.png" 
+                alt="GG Beauty Aesthetics - Genoveva Ganeva" 
+                decoding="async"
+                fetchpriority="high"
+                width="170"
+                height="96"
+            >
         </a>
         
         <!-- Language Selector -->
         <div class="language-selector">
-    <select id="languageSelect">
-        <option value="es">🇪🇸 ES</option>
-        <option value="en">🇬🇧 EN</option>
-        <option value="de">🇩🇪 DE</option>
-    </select>
-</div>
+            <select id="languageSelect">
+                <option value="es">🇪🇸 ES</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="de">🇩🇪 DE</option>
+            </select>
+        </div>
 
         <ul class="nav-links">
             <li><a href="#nosotros" class="magnetic" data-i18n="nav.about">Nosotros</a></li>
@@ -189,7 +196,17 @@
     <section class="about" id="nosotros">
         <div class="about-grid">
             <div class="about-image-wrapper reveal-left">
-                <img src="./assets/images/about-us.jpg" alt="Centro GG Beauty" class="about-image" loading="lazy" decoding="async">
+                <img 
+                    src="./assets/images/about-us.jpg" 
+                    srcset="./assets/images/about-us.jpg 665w, ./assets/images/about-us@2x.jpg 1330w" 
+                    sizes="(max-width: 768px) 100vw, 665px"
+                    alt="Centro GG Beauty" 
+                    class="about-image" 
+                    loading="lazy" 
+                    decoding="async"
+                    width="665" 
+                    height="665"
+                >
                 <div class="about-image-frame"></div>
                 <div class="about-floating-card">
                     <div class="number" data-count="5">0</div>
@@ -249,23 +266,23 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item reveal-scale stagger-1">
-                <img src="./assets/images/gallery-treatment-room.jpg" alt="Sala de Tratamientos" loading="lazy" decoding="async">
+                <img src="./assets/images/gallery-treatment-room.jpg" alt="Sala de Tratamientos" loading="lazy" decoding="async" width="600" height="400">
                 <div class="gallery-overlay"><div><h4 data-i18n="gallery.g1">Sala de Tratamientos</h4><p data-i18n="gallery.g1d">Espacio diseñado para tu bienestar</p></div></div>
             </div>
             <div class="gallery-item reveal-scale stagger-2">
-                <img src="./assets/images/gallery-facial.jpg" alt="Tecnología Avanzada" loading="lazy" decoding="async">
+                <img src="./assets/images/gallery-facial.jpg" alt="Tecnología Avanzada" loading="lazy" decoding="async" width="600" height="400">
                 <div class="gallery-overlay"><div><h4 data-i18n="gallery.g2">Tecnología Avanzada</h4><p data-i18n="gallery.g2d">Limpieza y Rejuvenecimiento de la Piel</p></div></div>
             </div>
             <div class="gallery-item reveal-scale stagger-3">
-                <img src="./assets/images/gallery-manicure.jpg" alt="Manicura OPI" loading="lazy" decoding="async">
+                <img src="./assets/images/gallery-manicure.jpg" alt="Manicura OPI" loading="lazy" decoding="async" width="600" height="400">
                 <div class="gallery-overlay"><div><h4 data-i18n="gallery.g3">Manicura OPI</h4><p data-i18n="gallery.g3d">Productos premium</p></div></div>
             </div>
             <div class="gallery-item reveal-scale stagger-4">
-                <img src="./assets/images/gallery-massage.jpg" alt="Masajes" loading="lazy" decoding="async">
+                <img src="./assets/images/gallery-massage.jpg" alt="Masajes" loading="lazy" decoding="async" width="600" height="400">
                 <div class="gallery-overlay"><div><h4 data-i18n="gallery.g4">Masajes</h4><p data-i18n="gallery.g4d">Relajación y bienestar</p></div></div>
             </div>
             <div class="gallery-item reveal-scale stagger-5">
-                <img src="./assets/images/gallery-radiofrequency.jpg" alt="Radiofrecuencia" loading="lazy" decoding="async">
+                <img src="./assets/images/gallery-radiofrequency.jpg" alt="Radiofrecuencia" loading="lazy" decoding="async" width="600" height="400">
                 <div class="gallery-overlay"><div><h4 data-i18n="gallery.g5">Radiofrecuencia</h4><p data-i18n="gallery.g5d">Reafirmación y rejuvenecimiento</p></div></div>
             </div>
         </div>
@@ -296,7 +313,7 @@
         <div class="team-grid" style="max-width: 500px; margin: 0 auto;">
             <div class="team-card reveal stagger-1">
                 <div class="team-image">
-                    <img src="./assets/images/team-genoveva.jpg" alt="Genoveva Ganeva" loading="lazy" decoding="async">
+                    <img src="./assets/images/team-genoveva.jpg" alt="Genoveva Ganeva" loading="lazy" decoding="async" width="400" height="500">
                 </div>
                 <h3 class="team-name">Genoveva Ganeva</h3>
                 <p class="team-role" data-i18n="team.role1">Fundadora & Directora</p>
@@ -384,7 +401,16 @@
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo"><img src="./assets/images/Logo.png" alt="GG Beauty" loading="lazy" decoding="async"></div>
+                <div class="logo">
+                    <img 
+                        src="./assets/images/Logo.png" 
+                        alt="GG Beauty" 
+                        loading="lazy" 
+                        decoding="async"
+                        width="170"
+                        height="96"
+                    >
+                </div>
                 <p data-i18n="footer.brand">Genoveva Ganeva Beauty and Aesthetic Clinic. Tu centro de confianza en Lanzarote para tratamientos de belleza y estética avanzada.</p>
                 
                 <div class="footer-social">
