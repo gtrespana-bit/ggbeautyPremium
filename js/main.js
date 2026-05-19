@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Exponer globalmente por compatibilidad
+    // Exponer globalmente
     window.changeLanguage = applyLanguage;
 
-    // Vincular evento al selector (mejor práctica que onchange inline)
+    // Vincular evento al selector
     const langSelect = document.getElementById('languageSelect');
     if (langSelect) {
         langSelect.addEventListener('change', (e) => applyLanguage(e.target.value));
@@ -201,20 +201,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    window.handleSubmit = function(e) {
-        e.preventDefault();
-        const btn = e.target.querySelector('.form-submit');
-        if (btn) {
-            const orig = btn.textContent;
-            btn.textContent = '✓ SOLICITUD ENVIADA';
-            btn.style.background = 'linear-gradient(135deg,#4CAF50,#45a049)';
-            setTimeout(() => {
-                btn.textContent = orig;
-                btn.style.background = '';
-                e.target.reset();
-            }, 3000);
-        }
-    };
+    // Form handler ya no es necesario (Web3Forms maneja el submit)
+    // Se mantiene por compatibilidad si se usa otro método
 
     document.querySelectorAll('.service-card').forEach(card => {
         card.addEventListener('mousemove', e => {
