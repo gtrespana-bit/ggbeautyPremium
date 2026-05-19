@@ -89,4 +89,6 @@
   "footer.privacy": { "es": "Privacidad", "en": "Privacy", "de": "Datenschutz" },
   "footer.terms": { "es": "Términos", "en": "Terms", "de": "AGB" },
   "footer.cookies": { "es": "Cookies", "en": "Cookies", "de": "Cookies" }
+  "contact.phone_whatsapp": { "es": "Teléfono & WhatsApp", "en": "Phone & WhatsApp", "de": "Telefon & WhatsApp" },
+  "whatsapp.button": { "es": "Escribir por WhatsApp", "en": "Chat on WhatsApp", "de": "Über WhatsApp schreiben" },
 }
