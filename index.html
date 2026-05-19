@@ -13,21 +13,22 @@
     
     <!-- Open Graph / Social Preview -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.tudominio.com/">
+    <meta property="og:url" content="https://ggbeauty-lanzarote.vercel.app/">
     <meta property="og:title" content="GG Beauty Aesthetics — Genoveva Ganeva | Tías, Lanzarote">
     <meta property="og:description" content="Tu centro de confianza en Lanzarote para tratamientos de belleza y estética avanzada. Reserva tu cita hoy.">
-    <meta property="og:image" content="https://www.tudominio.com/assets/images/Logo.png">
+    <meta property="og:image" content="https://ggbeauty-lanzarote.vercel.app/assets/images/Logo.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/images/Logo.png">
     
-    <!-- Fonts & CSS -->
+    <!-- Fonts & CSS (Async Loading) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
-    <!-- Cargar CSS de forma asíncrona (no bloqueante) -->
-<link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    
+    <!-- CSS asíncrono (no bloqueante) -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
     <!-- Schema.org JSON-LD (SEO Local) -->
     <script type="application/ld+json">
@@ -35,9 +36,9 @@
       "@context": "https://schema.org",
       "@type": "BeautySalon",
       "name": "GG Beauty Aesthetics",
-      "image": "https://www.tudominio.com/assets/images/Logo.png",
-      "@id": "https://www.tudominio.com",
-      "url": "https://www.tudominio.com",
+      "image": "https://ggbeauty-lanzarote.vercel.app/assets/images/Logo.png",
+      "@id": "https://ggbeauty-lanzarote.vercel.app",
+      "url": "https://ggbeauty-lanzarote.vercel.app",
       "telephone": "+34644330466",
       "priceRange": "€€",
       "address": {
@@ -130,14 +131,12 @@
     <section class="hero" id="inicio">
         <div class="hero-bg">
             <picture>
-                <!-- WebM (Mejor compresión, carga primero si es compatible) -->
+                <!-- WebM (Mejor compresión) -->
                 <source media="(min-width: 769px)" srcset="video.webm" type="video/webm">
                 <source media="(max-width: 768px)" srcset="video-movil.webm" type="video/webm">
-                
-                <!-- MP4 (Fallback universal) -->
+                <!-- MP4 Fallback -->
                 <source media="(min-width: 769px)" srcset="video.mp4" type="video/mp4">
                 <source media="(max-width: 768px)" srcset="video-movil.mp4" type="video/mp4">
-                
                 <video class="hero-video" autoplay muted loop playsinline preload="auto">
                     <source src="video.mp4" type="video/mp4">
                 </video>
@@ -368,17 +367,48 @@
                     <span data-i18n="whatsapp.button">Escribir por WhatsApp</span>
                 </a>
             </div>
-            <form class="contact-form reveal-right" onsubmit="handleSubmit(event)">
+            
+            <!-- FORMULARIO CON WEB3FORMS -->
+            <form 
+                action="https://api.web3forms.com/submit" 
+                method="POST" 
+                class="contact-form reveal-right"
+            >
+                <!-- Access Key de Web3Forms -->
+                <input type="hidden" name="access_key" value="b9729853-d85e-4d65-8073-279b020d98f7">
+                
+                <!-- Configuración del email -->
+                <input type="hidden" name="subject" value="📩 Nueva solicitud de cita - GG Beauty Aesthetics">
+                <input type="hidden" name="from_name" value="Web GG Beauty">
+                <input type="hidden" name="redirect" value="https://ggbeauty-lanzarote.vercel.app/#contacto">
+                
+                <!-- Honeypot anti-spam (oculto, no borrar) -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                 <div class="form-row">
-                    <div class="form-group"><input type="text" placeholder=" " required><label data-i18n="form.name">Nombre</label></div>
-                    <div class="form-group"><input type="text" placeholder=" " required><label data-i18n="form.surname">Apellido</label></div>
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder=" " required>
+                        <label data-i18n="form.name">Nombre</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="apellido" placeholder=" " required>
+                        <label data-i18n="form.surname">Apellido</label>
+                    </div>
                 </div>
+                
                 <div class="form-row">
-                    <div class="form-group"><input type="email" placeholder=" " required><label>Email</label></div>
-                    <div class="form-group"><input type="tel" placeholder=" "><label data-i18n="form.phone">Teléfono</label></div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder=" " required>
+                        <label>Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="telefono" placeholder=" ">
+                        <label data-i18n="form.phone">Teléfono</label>
+                    </div>
                 </div>
+                
                 <div class="form-group">
-                    <select required>
+                    <select name="tratamiento" required>
                         <option value="" disabled selected data-i18n="form.select">Tratamiento de interés</option>
                         <option>Tratamiento Facial</option>
                         <option>Depilación Láser</option>
@@ -393,7 +423,12 @@
                         <option>Otro tratamiento</option>
                     </select>
                 </div>
-                <div class="form-group"><textarea placeholder=" "></textarea><label data-i18n="form.message">Mensaje o dudas</label></div>
+                
+                <div class="form-group">
+                    <textarea name="mensaje" placeholder=" "></textarea>
+                    <label data-i18n="form.message">Mensaje o dudas</label>
+                </div>
+                
                 <button type="submit" class="form-submit magnetic" data-i18n="form.submit">Solicitar Cita</button>
             </form>
         </div>
